@@ -1,0 +1,27 @@
+wows-render-gamedata
+Copyright 2026 toalba
+
+This product includes software developed by toalba and is licensed under the
+Apache License, Version 2.0 (see LICENSE).
+
+------------------------------------------------------------------------------
+Third-party content
+------------------------------------------------------------------------------
+
+This repository republishes a curated subset of game data from the
+World of Warships client. The following files and directories contain
+content that is the copyright of Wargaming Group Limited and/or its
+affiliates ("Wargaming"). They are redistributed here for the purpose
+of community-developed tooling that interoperates with the World of
+Warships client. No part of this content is relicensed by this repository,
+and Wargaming retains all rights:
+
+  - data/content/GameParams.data
+  - data/gui/**
+  - data/spaces/**
+  - data/scripts_entity/**
+  - data/global.mo
+  - data/*.json (curated lookup tables derived from the above)
+
+"World of Warships" and "Wargaming" are trademarks of Wargaming.
+This project is not affiliated with or endorsed by Wargaming.

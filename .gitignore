@@ -1,0 +1,6 @@
+# Local scratch
+.DS_Store
+__pycache__/
+*.pyc
+.idea/
+.vscode/
