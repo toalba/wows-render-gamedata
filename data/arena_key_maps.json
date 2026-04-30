@@ -105,6 +105,7 @@
       "teamId", 
       "paramsId"
     ], 
+    "ServerObserverSharedInfo": [], 
     "ServerSharedInfo": [
       "id", 
       "accountDBID", 
@@ -192,14 +193,6 @@
       "dogTag", 
       "shipConfigDump", 
       "crewModifiersCompactParams", 
-      "evaluationsSpent"
-    ], 
-    "SERVER_OBSERVER_DATA": [
-      "id", 
-      "accountDBID", 
-      "name", 
-      "teamId", 
-      "dogTag", 
       "evaluationsSpent"
     ], 
     "SERVICE_INFO_DATA": [

@@ -1,5 +1,6 @@
 {
   "42": "submarineLocator", 
+  "43": "planeSmokeGenerator", 
   "24": "subsOxygenRegen", 
   "25": "subsWaveGunBoost", 
   "26": "subsFourthState", 
@@ -8,6 +9,8 @@
   "21": "activeManeuvering", 
   "22": "callFighters", 
   "23": "regenerateHealth", 
+  "44": "plane_minefield", 
+  "45": "minefield", 
   "28": "trigger7", 
   "29": "trigger8", 
   "40": "affectedBuffAura", 
@@ -40,7 +43,7 @@
     ], 
     "extraction_method": "idGenerator(start) sequential enum from bytecode pattern match", 
     "description": "ConsumablesTypes enum: integer ID -> consumableType string", 
-    "build": "12116141"
+    "build": "12267945"
   }, 
   "17": "trigger5", 
   "16": "trigger4", 

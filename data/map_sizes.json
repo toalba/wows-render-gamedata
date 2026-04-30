@@ -146,5 +146,9 @@
   "56_AngelWings": {
     "space_size": 1600,
     "scaling": 0.475
+  },
+  "58_RidgeNew": {
+    "space_size": 1600,
+    "scaling": 0.475
   }
 }
