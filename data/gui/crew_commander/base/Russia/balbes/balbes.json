@@ -1,0 +1,32 @@
+{
+"skeleton": {
+	"hash": "TXgEV/g0OOs",
+	"spine": "4.1.23",
+	"x": -80,
+	"y": -73,
+	"width": 160,
+	"height": 147,
+	"images": "./texture_global_cap/",
+	"audio": ""
+},
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "160", "bone": "root", "attachment": "160" }
+],
+"skins": [
+	{
+		"name": "default",
+		"attachments": {
+			"160": {
+				"160": { "y": 0.5, "width": 160, "height": 147 }
+			}
+		}
+	}
+],
+"animations": {
+	"animation": {},
+	"static": {}
+}
+}
