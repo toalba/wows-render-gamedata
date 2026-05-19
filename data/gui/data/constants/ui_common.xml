@@ -54,8 +54,7 @@
 
 		<const name="UNBREAKABLE_FRONT"			value="PCVE053"					/>
 
-		<range name="EVENT_HUB_OPERATIONS"		values="STAR_TREK_OPERATION_1, STAR_TREK_OPERATION_2, STAR_TREK_OPERATION_3"/>
-		<range name="WITH_CUSTOM_RIBBON_SKINS"	values="STAR_TREK_OPERATION_1, STAR_TREK_OPERATION_2, STAR_TREK_OPERATION_3"/>
+		<range name="EVENT_HUB_OPERATIONS"	values="STAR_TREK_OPERATION_1, STAR_TREK_OPERATION_2, STAR_TREK_OPERATION_3"/>
 		<range name="WOWS_CLASSIC_EVENTS"		values="WOWS_CLASSIC_1, WOWS_CLASSIC_2, WOWS_CLASSIC_3, WOWS_CLASSIC_4, WOWS_CLASSIC_5, WOWS_CLASSIC_6"/>
 		<range name="WITH_MANY_RESTRICTIONS"	values="END_OF_WW2_RANDOM, WOWS_CLASSIC_1, WOWS_CLASSIC_2, WOWS_CLASSIC_3, WOWS_CLASSIC_4, WOWS_CLASSIC_5, WOWS_CLASSIC_6"/>
 		<range name="MODERN_ERA_BATTLES"		values="MODERN_ERA_ATTACK, MODERN_ERA_DEFENCE, MODERN_ERA_SHUFFLE"/>
@@ -81,6 +80,18 @@
 		<const name="OPERATION" value="operation"/>
 		<const name="BATTLEPASS" value="battlepass"/>
 		<const name="DAILY_REWARDS" value="dailyrewards"/>
+	</enum>
+
+	<enum name="PROMOSCREEN_TEMPLATE_TYPES" type="Integer">
+		<const name="TEMPLATE_0" value="0"/>
+		<const name="TEMPLATE_1" value="1"/>
+		<const name="TEMPLATE_2" value="2"/>
+		<const name="TEMPLATE_3" value="3"/>
+		<const name="TEMPLATE_4" value="4"/>
+		<const name="TEMPLATE_5" value="5"/>
+
+		<range name="UNBOUND_TEMPLATES" values="TEMPLATE_0, TEMPLATE_1, TEMPLATE_2, TEMPLATE_3"/>
+		<range name="GAMEFACE_TEMPLATES" values="TEMPLATE_4, TEMPLATE_5"/>
 	</enum>
 
 	<enum name = "SNOWFLAKES_BANNER_STATE" type="Integer">

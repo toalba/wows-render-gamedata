@@ -1,6 +1,15 @@
 {
+  "58": "planeTacticalFighters", 
+  "56": "planeTrigger3", 
+  "54": "planeTrigger1", 
   "42": "submarineLocator", 
+  "48": "tacticalTrigger4", 
   "43": "planeSmokeGenerator", 
+  "60": "All", 
+  "61": "Special", 
+  "49": "tacticalTrigger5", 
+  "52": "smokePlane", 
+  "53": "tacticalBuff", 
   "24": "subsOxygenRegen", 
   "25": "subsWaveGunBoost", 
   "26": "subsFourthState", 
@@ -9,6 +18,8 @@
   "21": "activeManeuvering", 
   "22": "callFighters", 
   "23": "regenerateHealth", 
+  "46": "tacticalTrigger1", 
+  "47": "tacticalTrigger3", 
   "44": "plane_minefield", 
   "45": "minefield", 
   "28": "trigger7", 
@@ -25,8 +36,10 @@
   "6": "smokeGenerator", 
   "9": "fighter", 
   "8": "regenCrew", 
+  "51": "reconnaissanceSquad", 
   "39": "groupAuraBuff", 
   "38": "subsEnergyFreeze", 
+  "59": "Any", 
   "14": "trigger2", 
   "11": "torpedoReloader", 
   "10": "sonar", 
@@ -43,7 +56,7 @@
     ], 
     "extraction_method": "idGenerator(start) sequential enum from bytecode pattern match", 
     "description": "ConsumablesTypes enum: integer ID -> consumableType string", 
-    "build": "12267945"
+    "build": "12506899"
   }, 
   "17": "trigger5", 
   "16": "trigger4", 
@@ -56,5 +69,8 @@
   "35": "weaponReloadBooster", 
   "34": "goDeep", 
   "33": "circleWave", 
-  "32": "buffsShift"
+  "55": "planeTrigger2", 
+  "32": "buffsShift", 
+  "57": "planeBuff", 
+  "50": "tacticalTrigger6"
 }

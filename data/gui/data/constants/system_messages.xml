@@ -40,6 +40,7 @@
 		<const name="CLAN_CHANGED"				value="clan_changed"				/>
 		<const name="CLAN_TREASURY_REWARDED"	value="clan_treasury_rewarded"		/>
 		<const name="CLAN_TREASURY_DISTRIBUTED" value="clan_treasury_distributed"	/>
+		<const name="CLAN_BONUS_REWARD"			value="clan_bonus_reward"			/>
 		<const name="BATTLE_REWARDS"			value="battle_rewards"				/>
 		<const name="VERSION_UPDATERS"			value="version_updaters"			/>
 		<const name="CUSTOM"					value="custom"						/>

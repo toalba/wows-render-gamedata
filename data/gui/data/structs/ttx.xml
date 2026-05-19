@@ -8,7 +8,6 @@
 		<property	name='artillery' 		type="ArtilleryTTX"		default="null"/>
 		<property	name='pinger' 			type="PingerTTX"		default="null"/>
 		<property	name='torpedoes' 		type="TorpedoesTTX"		default="null"/>
-		<property	name='torpedoGroups' 	type="TorpedoGroupsTTX"	default="null"/>
 		<property	name='squadrons' 		type="SquadronsTTX"		default="null"/>
 		<property	name='depthCharges' 	type="DepthChargesTTX"	default="null"/>
 		<property	name='airSupport'	 	type="AirSupportTTX"	default="null"/>
@@ -19,8 +18,6 @@
 		<property	name='visibility' 		type="VisibilityTTX"	default="null"/>
 		<!-- Modules specific parameters -->
 		<property	name='hull'				type="HullTTX"			default="null"/>
-		<!-- StarTrek weaponry parameters -->
-		<property	name='phaserLasers'		type="PhaserLasersTTX"		default="null"/>
 		<!-- Modern era					-->
 		<property	name='antiMissile'		type="AntiMissilesTTX"		default="null"/>
 		<property	name='missile'			type="MissilesTTX"			default="null"/>
@@ -36,10 +33,6 @@
 		<property	name='airDefenseMaxDist'		type="FloatDiff"	default="null"/>
 		<property	name='antiMissileMaxDist'		type="FloatDiff"	default="null"/>
 		<property	name='missilesMaxDist'			type="FloatDiff"	default="null"/>
-		<!-- StarTrek Weapons BEGIN -->
-		<property	name='pulsePhasersMaxDist'		type="FloatDiff"	default="null"/>
-		<property	name='phaserLasersMaxDist'		type="FloatDiff"	default="null"/>
-		<!-- StarTrek Weapons END -->
 		<property	name='battery'					type="FloatDiff"	default="null"/>
 		<property	name='mobility'					type="FloatDiff"	default="null"/>
 		<property	name='visibility'				type="FloatDiff"	default="null"/>
@@ -155,21 +148,6 @@
 
 	<!-- Torpedoes TTX -->
 
-	<struct name="TorpedoesTTX" superclass="IntegralTTX">
-		<property	name='launchers'			type="Array" contains="TorpedoLauncherTTX"/>
-		<property	name='torpedo'				type="TorpedoTTX"	default="null"/>
-		<property	name='torpedoDeepwater'		type="TorpedoTTX"	default="null"/>
-		<property	name='torpedoAlt'			type="TorpedoTTX"	default="null"/>
-		<property	name='reloadTime'			type="FloatDiff"/>
-		<property	name='ammoSwitchTime'		type="FloatDiff"/>
-		<property	name='isPulsePhasers'		type="BoolDiff"/>
-	</struct>
-
-	<struct name="TorpedoLauncherTTX" superclass="GunTTX">
-		<property	name='rotationSpeed'	type="FloatDiff"/>
-		<property	name='rotationTime'		type="FloatDiff"/>
-	</struct>
-
 	<struct name="TorpedoTTX" superclass="AmmoItemTTX">
 		<property	name='name'					type="String"/>
 		<property	name='damage'				type="FloatDiff"/>
@@ -179,26 +157,39 @@
 		<property	name='canHitClasses'		type="Array" contains="String"/>
 		<property	name='distanceOfMaxDamage'	type="FloatDiff"/>
 		<property	name='isDamageIncreasing'	type="BoolDiff"/>
+		<property	name='disabledUnderwater' 	type="BoolDiff"/>
 	</struct>
 
 	<!-- Torpedo Groups TTX -->
 
-	<struct name="TorpedoGroupsTTX" superclass="IntegralTTX">
-		<property	name='bowGroup'				type="TorpedoGroupTTX"	default="null"/>
-		<property	name='sternGroup'			type="TorpedoGroupTTX"	default="null"/>
-		<property	name='torpedo'				type="TorpedoTTX"		default="null"/>
-		<property	name='torpedoDeepwater'		type="TorpedoTTX"		default="null"/>
-		<property	name='torpedoAlt'			type="TorpedoTTX"		default="null"/>
+	<struct name="TorpedoesTTX" superclass="IntegralTTX">
+		<property	name='ungroupedLaunchers'	type="TorpedoLaunchersTTX"	default="null"/>
+		<property	name='bowGroup'				type="TorpedoGroupTTX"				default="null"/>
+		<property	name='sternGroup'			type="TorpedoGroupTTX"				default="null"/>
+		<!--				AMMO RELOAD TIME					-->
+		<property	name='reloadTime'			type="FloatDiff"/>
+		<property	name='ammoSwitchTime'		type="FloatDiff"/>
+		<!--					AMMOS							-->
+		<property	name='torpedo'				type="TorpedoTTX"	default="null"/>
+		<property	name='torpedoDeepwater'		type="TorpedoTTX"	default="null"/>
+		<property	name='torpedoAlt'			type="TorpedoTTX"	default="null"/>
+	</struct>
+
+	<struct name="TorpedoLauncherTTX" superclass="GunTTX">
+		<property	name='rotationSpeed'	type="FloatDiff"/>
+		<property	name='rotationTime'		type="FloatDiff"/>
+	</struct>
+
+	<struct name="TorpedoLaunchersTTX">
+		<property	name='launchers'			type="Array" contains="TorpedoLauncherTTX"/>
+		<property	name='reloadTime'			type="FloatDiff"/>
+		<property	name='ammoSwitchTime'		type="FloatDiff"/>
 	</struct>
 
 	<struct name="TorpedoGroupTTX" superclass="GunTTX">
-		<property	name='reloadTime'	type="FloatDiff"/>
+		<property	name='reloadTime'		type="FloatDiff"/>
 		<property	name='ammoSwitchTime'	type="FloatDiff"/>
-		<property	name='numLoaders'	type="IntDiff"/>
-	</struct>
-
-	<struct name="SubmarineTorpedoTTX" superclass="TorpedoTTX">
-		<property	name='disabledUnderwater' 	type="BoolDiff"/>
+		<property	name='numLoaders'		type="IntDiff"/>
 	</struct>
 
 	<!-- Squadrons TTX -->
@@ -231,29 +222,44 @@
 		<property	name='disabledUnderwater'	type="BoolDiff"	/>
 	</struct>
 
+	<struct name="PlanePayloadTTX" superclass="AmmoItemTTX">
+		<property	name='name'				type="String"/>
+		<property	name='damage'			type="FloatDiff"/>
+		<property	name='numBombs'			type="IntDiff"/>
+		<property	name='burnChance'		type="FloatDiff"/>
+		<property	name='piercing'			type="IntDiff"/>
+	</struct>
+
+	<struct name="SkipBombTTX" superclass="PlanePayloadTTX">
+		<property	name='skipsCount'	type="IntDiff"/>
+	</struct>
+
+	<struct name="AviaTorpedoTTX" superclass="PlanePayloadTTX">
+		<property	name='speed'			type="FloatDiff"/>
+		<property	name='armingDistance'	type="FloatDiff"/>
+		<property	name='maxDist'			type="FloatDiff"/>
+	</struct>
+
 	<struct name="FightersTTX" superclass="SquadronTTX">
-		<property	name='rocketHE' 	type="BombHETTX"	default="null"/>
-		<property	name='rocketAP' 	type="BombAPTTX"	default="null"/>
+		<property	name='payload' 	type="PlanePayloadTTX"/>
 	</struct>
 
 	<struct name="BombersTTX" superclass="SquadronTTX">
-		<property	name='bombHE' 	type="BombHETTX"	default="null"/>
-		<property	name='bombAP' 	type="BombAPTTX"	default="null"/>
-		<property	name='bombDC' 	type="BombDCTTX"	default="null"/>
+		<property	name='payload'	type="PlanePayloadTTX"/>
 	</struct>
 
-	<struct name="AirSupportPlaneTTX" superclass="BombersTTX">
+	<struct name="AirSupportPlaneTTX" superclass="SquadronTTX">
 		<property	name='type'				type="String"/>
-		<property	name='chargesNum'	 	type="IntDiff"/>
+		<property	name='chargesNum'		type="IntDiff"/>
+		<property	name='payload'			type="PlanePayloadTTX"/>
 	</struct>
 
 	<struct name="SkipBombersTTX" superclass="SquadronTTX">
-		<property	name='bombHE' 	type="BombSkipHETTX"	default="null"/>
-		<property	name='bombAP' 	type="BombSkipAPTTX"	default="null"/>
+		<property	name='payload'		type="SkipBombTTX"/>
 	</struct>
 
 	<struct name="TorpedoBombersTTX" superclass="SquadronTTX">
-		<property	name='torpedo' 		type="AviaTorpedoTTX"/>
+		<property	name='payload'		type="AviaTorpedoTTX"/>
 	</struct>
 
 	<!-- DepthCharges TTX -->
@@ -276,39 +282,6 @@
 		<property	name='ammoSwitchTime'	type="FloatDiff"/>
 		<property	name='maxDist'			type="FloatDiff"/>
 		<property	name='buoyancyRestrictions'	type="BuoyancyRestrictionsTTX"/>
-	</struct>
-
-	<struct name="BombTTX">
-		<property	name='name'				type="String"/>
-		<property	name='customUIPostfix'	type="String"/>
-		<property	name='damage'			type="FloatDiff"/>
-		<property	name='numBombs'			type="IntDiff"/>
-		<property	name='burnChance'		type="FloatDiff"/>
-	</struct>
-
-	<struct name="BombHETTX" superclass="BombTTX">
-		<!-- [WWSD-202274] piercing should be int rounded down -->
-		<property	name='piercing'		type="IntDiff"/>
-	</struct>
-
-	<struct name="BombDCTTX" superclass="BombTTX">
-	</struct>
-
-	<struct name="BombAPTTX" superclass="BombTTX">
-	</struct>
-
-	<struct name="BombSkipHETTX" superclass="BombHETTX">
-		<property	name='skipsCount'	type="IntDiff"/>
-	</struct>
-
-	<struct name="BombSkipAPTTX" superclass="BombAPTTX">
-		<property	name='skipsCount'	type="IntDiff"/>
-	</struct>
-
-	<struct name="AviaTorpedoTTX" superclass="BombTTX">
-		<property	name='speed'			type="FloatDiff"/>
-		<property	name='armingDistance'	type="FloatDiff"/>
-		<property	name='maxDist'			type="FloatDiff"/>
 	</struct>
 
 	<!-- AirDefense TTX -->
@@ -412,42 +385,6 @@
 		<property	name='batteryCapacity'			type="IntDiff"/>
 		<!-- Guaranteed visibility is taken from a constant and visibilityByShip.smoke -->
 	</struct>
-
-	<!-- StarTrek weapons -->
-	<!-- Torpedo-Like weapons BEGIN -->
-	<!-- Aiming System -->
-
-	<struct name="SalvoConfigurationTTX">
-		<property	name='mountsCount'		type="IntDiff"/>
-		<property	name='salvoPerMount'	type="IntDiff"/>
-	</struct>
-
-	<!-- Photon Torpedo END -->
-
-	<!-- Pulse Phaser (Torpedo) BEGIN -->
-	<struct name="PulsePhasersTTX" superclass="TorpedoesTTX"/>
-	<!-- Pulse Phaser (Torpedo) END -->
-	<!-- Torpedo-Like weapons END -->
-
-	<!-- Phaser Gun BEGIN -->
-	<struct name="PhaserLaserAmmoTTX" superclass="AmmoItemTTX">
-		<property	name='name' 				type="String"/>
-		<property	name='damage'				type="FloatDiff"/>
-		<property	name='burnChance' 			type="FloatDiff"/>
-	</struct>
-
-	<struct name="PhaserLaserGunTTX" superclass="MainGunTTX">
-	</struct>
-
-	<struct name="PhaserLasersTTX" superclass="IntegralTTX">
-		<property	name='guns'			type="Array" contains="PhaserLaserGunTTX"/>
-		<property	name='salvoConfiguration'	type="SalvoConfigurationTTX"/>
-		<property	name='ammo'			type="PhaserLaserAmmoTTX"	default="null"/>
-		<property	name='reloadTime'	type="FloatDiff"/>
-		<property	name='maxDist'		type="FloatDiff"/>
-	</struct>
-	<!-- Phaser Gun END -->
-
 	<!-- Antimissiles BEGIN -->
 	<struct name="AntiMissilesTTX" superclass="IntegralTTX">
 		<property	name='duration'				type="FloatDiff"/>

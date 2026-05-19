@@ -18,7 +18,7 @@
 		<const name="ULTIMATE"					value="ultimate"					/>
 		<const name="EARLY_ACCESS"				value="earlyAccess"					/>
 		<const name="UPGRADEABLE_ULT"			value="upgradeableUltimate"			/>
-		<const name="SUPER_SHIP"			    value="superShip"				    />
+		<const name="SUPER_SHIP"				value="superShip"					/>
 		<const name="DEMO_WITH_STATS"			value="demoWithStats"				/>
 		<const name="COOP_ONLY"					value="coopOnly"					/>
 		<const name="NOT_FOR_BATTLE"			value="notForBattle"				/>
@@ -87,6 +87,7 @@
 		<const name="ITA_CA_PIEMONTE"	/>
 		<const name="ITA_BB"			/>
 		<const name="ITA_DD"			/>
+		<const name="ITA_SS"			/>
 
 		<const name="RU_CA"				/>
 		<const name="RU_CA_HEAVY"		/>
@@ -187,9 +188,8 @@
 		<const name="MISSILES"			value="14"	/>
 
 		<const name="SQUADRON" 			value="100" />  <!-- plane rockets, bombs, torpedoes -->
-		<const name="PULSE_PHASERS" 	value="200" />  <!-- Fake weapon type for pulse phasers feedback -->
 
-		<range name="SHOW_SHIP_DOLL"	values="ARTILLERY, TORPEDO, CHARGE_LASER, IMPULSE_LASER, WAVES, PHASER_LASER"/>
+		<range name="SHOW_SHIP_DOLL"	values="ARTILLERY, TORPEDO, CHARGE_LASER, IMPULSE_LASER, WAVES"/>
 		<range name="HIDE_RELOAD_BARS"	values="DEPTH_CHARGES"/>
 
 		<range name="PARAMS_BY_AMMO_TYPE"		values="ARTILLERY, TORPEDO, AIR_SUPPORT, SQUADRON"/>
@@ -197,20 +197,20 @@
 	</enum>
 
 	<enum name="SHIP_MODULE_TYPES" type="Integer">
-		<const name="ARTILLERY" 		value="0" 	        />
-		<const name="HULL" 				value="1"			/>
-		<const name="TORPEDOES" 		value="2" 	        />
-		<const name="SUO" 		        value="3"			/>
-		<const name="ENGINE" 		    value="4" 	        />
-		<const name="TORPEDO_BOMBER" 	value="5" 	    	/>
-		<const name="DIVE_BOMBER" 		value="6" 	    	/>
-		<const name="FIGHTER" 			value="7" 	        />
-		<const name="FLIGHT_CONTROLL" 	value="8" 			/>
-		<const name="HYDROPHONE" 	    value="9" 	    	/>
-		<const name="SKIP_BOMBER"		value="10"			/>
-		<const name="PRIMARY_WEAPONS"	value="11" 	    	/>
-		<const name="SECONDARY_WEAPONS"	value="12" 	    	/>
-		<const name="ABILITIES"		    value="13" 	    	/>
+		<const name="ARTILLERY" 		value="0"/>
+		<const name="HULL" 				value="1"/>
+		<const name="TORPEDOES" 		value="2"/>
+		<const name="SUO" 				value="3"/>
+		<const name="ENGINE" 			value="4"/>
+		<const name="TORPEDO_BOMBER" 	value="5"/>
+		<const name="DIVE_BOMBER" 		value="6"/>
+		<const name="FIGHTER" 			value="7"/>
+		<const name="FLIGHT_CONTROLL" 	value="8"/>
+		<const name="HYDROPHONE" 		value="9"/>
+		<const name="SKIP_BOMBER"		value="10"/>
+		<const name="PRIMARY_WEAPONS"	value="11"/>
+		<const name="SECONDARY_WEAPONS"	value="12"/>
+		<const name="ABILITIES"			value="13"/>
 	</enum>
 
 	<enum name="SHIP_MODULE_STR_TYPES" type="String">
@@ -237,11 +237,11 @@
 	</enum>
 
 	<enum name="SHIP_SLOT_TYPES" type="Integer">
-		<const name="ABILITY" 	        value="0" 	    />
-		<const name="MODERNIZATION" 	value="1" 	    />
-		<const name="AMMO" 	            value="2" 	    />
-		<const name="MODULE" 	        value="3" 	    />
-		<const name="SQUADRON_ABILITY" 	value="4" 	    />
+		<const name="ABILITY" 			value="0"/>
+		<const name="MODERNIZATION" 	value="1"/>
+		<const name="AMMO" 				value="2"/>
+		<const name="MODULE" 			value="3"/>
+		<const name="SQUADRON_ABILITY" 	value="4"/>
 
 		<!--eco boosts, mapped to common.ECOBOOST_TYPES-->
 		<const name="CREDITS"			value="6"/>
@@ -264,18 +264,18 @@
 	</enum>
 
 	<enum name="PLANE_SORTING_WEIGHT" type="Integer">
-		<const name="REGULAR" 	        value="0" 	    />
-		<const name="ALTERNATIVE" 		value="10" 	    />
+		<const name="REGULAR" 			value="0" 		/>
+		<const name="ALTERNATIVE" 		value="10" 		/>
 	</enum>
 
 	<enum name="SQUAD_TYPES" type="String">
-		<const name="FIGHTER" 	        	value="Fighter"		/>
-		<const name="BOMBER" 				value="Bomber" 	    />
-		<const name="DIVE" 					value="Dive" 	    />
+		<const name="FIGHTER" 				value="Fighter"		/>
+		<const name="BOMBER" 				value="Bomber" 		/>
+		<const name="DIVE" 					value="Dive" 		/>
 		<const name="SKIP"					value="Skip"		/>
 		<const name="FIGHTER_ALTERNATIVE" 	value="Fighter_alt"		/>
-		<const name="BOMBER_ALTERNATIVE" 	value="Bomber_alt" 	    />
-		<const name="DIVE_ALTERNATIVE" 		value="Dive_alt" 	    />
+		<const name="BOMBER_ALTERNATIVE" 	value="Bomber_alt" 		/>
+		<const name="DIVE_ALTERNATIVE" 		value="Dive_alt" 		/>
 		<const name="SKIP_ALTERNATIVE"		value="Skip_alt"		/>
 	</enum>
 

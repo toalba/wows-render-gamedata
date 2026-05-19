@@ -195,6 +195,13 @@
     "nation": "USA",
     "species": "Battleship"
   },
+  "3321837360": {
+    "index": "PGSB928",
+    "level": 8,
+    "name": "PGSB928_Hunt_Bismarck_1941",
+    "nation": "Germany",
+    "species": "Battleship"
+  },
   "3330159920": {
     "index": "PWSD920",
     "level": 10,
@@ -1252,6 +1259,13 @@
     "nation": "Japan",
     "species": "Battleship"
   },
+  "3539941104": {
+    "index": "PISB720",
+    "level": 10,
+    "name": "PISB720_Conte_Verde",
+    "nation": "Italy",
+    "species": "Battleship"
+  },
   "3539941360": {
     "index": "PASB720",
     "level": 10,
@@ -1665,6 +1679,20 @@
     "nation": "Pan_America",
     "species": "Destroyer"
   },
+  "3550361040": {
+    "index": "PRSD710",
+    "level": 10,
+    "name": "PRSD710_Peredovoy",
+    "nation": "Russia",
+    "species": "Destroyer"
+  },
+  "3550361296": {
+    "index": "PJSD710",
+    "level": 10,
+    "name": "PJSD710_Fuyutsuki",
+    "nation": "Japan",
+    "species": "Destroyer"
+  },
   "3550361328": {
     "index": "PISD710",
     "level": 10,
@@ -1832,6 +1860,13 @@
     "name": "PBSA710_Ocean",
     "nation": "United_Kingdom",
     "species": "AirCarrier"
+  },
+  "3551409520": {
+    "index": "PUSD709",
+    "level": 9,
+    "name": "PUSD709_Cayuga",
+    "nation": "Commonwealth",
+    "species": "Destroyer"
   },
   "3551409616": {
     "index": "PRSD709",
@@ -6991,6 +7026,13 @@
     "name": "PASD021_Fletcher_1943",
     "nation": "USA",
     "species": "Destroyer"
+  },
+  "4272862928": {
+    "index": "PJSC021",
+    "level": 11,
+    "name": "PJSC021_Kurama",
+    "nation": "Japan",
+    "species": "Cruiser"
   },
   "4272895696": {
     "index": "PJSB021",

@@ -184,6 +184,7 @@
 		<const name="KONGZHONG" value="kongzhong"/>
 		<const name="DWH_EXPORTER_HOST" value="dwhExporterHost"/>
 		<const name="CLAN_INVITES" value="clanInvites"/>
+		<const name="CLAN_REQUEST" value="clanRequest"/>
 		<const name="CLANS_IN_GAME" value="clansInGame"/>
 		<const name="CLAN_WARS_IN_GAME" value="clanWarsInGame"/>
 		<const name="PATROLS_IN_GAME" value="patrolsInGame"/>
@@ -243,8 +244,8 @@
 		<const name="ACCOUNT_TRANSFER_START_TRANSFER_EGS" value="account_transfer_StartTransfer_EGS"/>
 		<const name="ACCOUNT_TRANSFER_START_TRANSFER" value="account_transfer_StartTransfer"/>
 
-		<range name="CLANS_PROJECTS"		values="CLAN_INVITES, CLANS_IN_GAME, CLAN_WARS_IN_GAME, RULES_ABOUT_CLAN_SEASON"/>
-		<range name="GAMEFACE_EXPOSED"		values="REPORT_ERROR, FORUM, PERSONAL_ACCOUNT, WARGAMING_NET, WOWS_WEBSITE, EULA, SUPPORT, CLANS_IN_GAME, PATROLS_IN_GAME, EXTRA_LICENCES, GUIDES_IN_GAME, SHOP_IN_GAME, MERCATOR_HOST, VORTEX_HOST, MARKER_HOST, PAGE_ABOUT_GAME_MECHANICS"/>
+		<range name="CLANS_PROJECTS"		values="CLAN_INVITES, CLANS_IN_GAME, CLAN_WARS_IN_GAME, RULES_ABOUT_CLAN_SEASON, CLAN_REQUEST"/>
+		<range name="GAMEFACE_EXPOSED"		values="REPORT_ERROR, FORUM, PERSONAL_ACCOUNT, WARGAMING_NET, WOWS_WEBSITE, EULA, SUPPORT, CLANS_IN_GAME, PATROLS_IN_GAME, EXTRA_LICENCES, GUIDES_IN_GAME, SHOP_IN_GAME, MERCATOR_HOST, VORTEX_HOST, MARKER_HOST, PAGE_ABOUT_GAME_MECHANICS, CLAN_REQUEST"/>
 	</enum>
 
 	<enum name="WINDOW_STATE" type="Integer">

@@ -30,16 +30,6 @@
       "clanColor", 
       "keyTargetMarkers"
     ], 
-    "ClientBuildingSharedInfo": [
-      "id", 
-      "uniqueId", 
-      "teamId", 
-      "paramsId", 
-      "isSuppressed", 
-      "isAlive", 
-      "name", 
-      "isHidden"
-    ], 
     "ObserverSharedInfo": [
       "id", 
       "accountDBID", 
@@ -99,13 +89,6 @@
       "clanColor", 
       "keyTargetMarkers"
     ], 
-    "ServerBuildingSharedInfo": [
-      "id", 
-      "uniqueId", 
-      "teamId", 
-      "paramsId"
-    ], 
-    "ServerObserverSharedInfo": [], 
     "ServerSharedInfo": [
       "id", 
       "accountDBID", 
@@ -193,6 +176,14 @@
       "dogTag", 
       "shipConfigDump", 
       "crewModifiersCompactParams", 
+      "evaluationsSpent"
+    ], 
+    "SERVER_OBSERVER_DATA": [
+      "id", 
+      "accountDBID", 
+      "name", 
+      "teamId", 
+      "dogTag", 
       "evaluationsSpent"
     ], 
     "SERVICE_INFO_DATA": [

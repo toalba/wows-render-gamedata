@@ -1176,7 +1176,6 @@
 		<property 	name="isModified"			type="Boolean"		/>
 		<property 	name="hasSubType"			type="Boolean"		/>
 		<property 	name="subTypePostfix"		type="String"		/>
-		<property 	name="customUIPostfix"		type="String"		/>
 	</component>
 
 	<component	name="Aircarrier"	>
@@ -2947,7 +2946,6 @@
 		<property 	name="panelTTX" 			type="ShipTTX"/>
 		<property 	name="modalTTX" 			type="ShipTTX"/>
 		<property 	name="compareTTX" 			type="ShipTTX"/>
-		<property 	name="compareReversedTTX" 	type="ShipTTX"/>
 
 		<!-- selectedConfig is a ShipConfig used to calculate selected TTX -->
 		<property 	name="selectedConfig" 	type="Dictionary" default="null" sync="false"/>
@@ -3164,58 +3162,6 @@
 		<event		name="evExteriorsChanged"/>
 		<event		name="evUpdateConfig"/>
 		<event		name="evPermoflageFirstBuyGoldDiscountChanged"/>
-	</component>
-
-	<component	name="ShipST">
-		<property	name="id"					type="Number"	pk="true"/>
-		<property	name="shipTTX"				type="ShipTTX"			/>
-		<property	name="previewTTX"			type="ShipTTX"			/>
-		<property	name="tooltipTTX"			type="ShipTTX"			/>
-		<property	name="armaments"			type="Array"	contains="AmmoSlotData"/>
-		<property	name="rageMode"				type="RageModeSlotData"	/>
-		<property	name="consumables"			type="Array"	contains="ConsumableSlotData"/>
-		<property	name="secondaries"			type="Array"	contains="SecondariesSlotData"/>
-		<property	name="previewArmaments"		type="Array"	contains="AmmoSlotData"/>
-		<property	name="previewRageMode"		type="RageModeSlotData"	/>
-		<property	name="previewConsumables"	type="Array"	contains="ConsumableSlotData"/>
-		<property	name="previewSecondaries"	type="Array"	contains="SecondariesSlotData"/>
-
-		<property	name="branchesPerType"		type="Array"	sync="False"	/>
-		<property	name="allModules"			type="Array"			/>	<!-- Holds currently displayed on equipment screen modules  -->
-		<property	name="installed"			type="Array"			/>
-		<property	name="inPreview"			type="Number"			/>
-
-		<event name="evUpdated"/>
-		<event name="evInstalledChanged"/>
-		<event name="evInPreviewChanged"/>
-		<event name="evTooltipTTXChanged"/>
-	</component>
-
-	<component	name="ModuleST">
-		<property	name="id"					type="Number"	pk="true"	/>
-		<property	name="name"					type="String"				/>
-		<property	name="grade"				type="Integer"				/>
-		<property	name="type"					type="String"				/>
-		<property	name="subtype"				type="String"				/>
-		<property	name="stGroup"				type="Integer"				/>
-		<property	name="subBranchIndex"		type="Integer"				/>
-		<property	name="isPurchased"			type="Boolean"				/>
-		<property	name="isInstalled"			type="Boolean"				/>
-		<property	name="purchaseState"		type="Integer"				/>
-		<property	name="price"				type="Number"				/>
-		<property	name="priceDeficit"			type="Number"				/>
-		<property	name="inPreview"			type="Boolean"				/>
-		<property	name="nextGrades"			type="Array"				/>
-		<property	name="isSeen"				type="Boolean"				/>
-		<property	name="attributes"			type="AttributesStruct"		/>
-		<property	name="armaments"			type="Array"				/>
-		<property	name="rageMode"				type="RageModeSlotData"		/>
-		<property	name="consumables"			type="Array"				/>
-		<property	name="secondaries"			type="Array"				/>
-
-		<event name="evUpdated"/>
-		<event name="evIsPurchasedChanged"/>
-
 	</component>
 
 	<component name="OwnCamouflage">
@@ -4259,11 +4205,6 @@
 	</component>
 
 	<component name="RibbonInfo">
-		<property name="ids" type="String"/>
-		<property name="iconName" type="String"/>
-	</component>
-
-	<component name="RibbonSkin">
 		<property name="ids" type="String"/>
 		<property name="iconName" type="String"/>
 	</component>
@@ -5346,6 +5287,7 @@
 		<property	name="isSquadronAbility"	type="Boolean"	default="false"/>
 		<property 	name="isInstalled" 			type="Boolean"	default="false"/>
 		<property	name="consumableType"		type="Integer"	sync="false"/>
+		<property	name="group"				type="String"	default="''"/>
 		<property	name="isSpecial"			type="Boolean"	 default="false"/>
 		<property	name="isSeen"				type="Boolean"	default="false"/>	<!-- Для консамблов, получаемых через SSE (pinata party) -->
 		<property	name="viewData"				type="ConsumableSlotData"	/>
@@ -7100,5 +7042,22 @@
 
 	<component name="RazerChromaIntegration" sync="false">
 		<property name="currentSpace"	type="String"/>
+	</component>
+
+	<component name="ClanMarkers">
+		<property	name="id"								type="String"	pk="true"/>
+		<property	name="name"								type="String"/>
+		<property	name="source"							type="String"/>
+		<property	name="status"							type="Boolean"/>
+		<property	name="tags"								type="Array"/>
+		<event name="evUpdate"/>
+	</component>
+
+	<component name="SysMessageStatsCollector"	sync="false">
+		<property name="id"						type="String" pk="true"/> 
+		<property name="category"				type="String"/>
+		<property name="name"					type="String"/>
+		<property name="actions"				type="Array" contains="String"/>
+		<event name="evChanged"/>
 	</component>
 </components>

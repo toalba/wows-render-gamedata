@@ -467,21 +467,6 @@
 		<range name="STATES_WITH_COUNTDOWN" values="ACTIVE, DECAY_DELAY, DECAYING"/>
 	</enum>
 
-	<enum name="RAGE_MODE_TRIGGER_TYPE" type="String">
-		<const name="ADJUSTMENT_SHOT"	value="AdjustmentShotActivator" />
-		<const name="RIBBON"			value="RibbonActivator" />
-		<const name="ACHIEVMENT"		value="AchievementActivator" />
-		<const name="TIMER"				value="TimerActivator" />
-		<const name="POTENTIAL_DAMAGE"	value="PotentialDamageActivator" />
-		<const name="MAIN_GUN_HIT"		value="main_gun_hit" />
-		<const name="STAY_INVISIBLE"	value="stay_invisible" />
-		<const name="STAY_SPOTTED"		value="stay_spotted" />
-
-		<value_to_name/>
-
-		<range name="WITH_VALUES" values="RIBBON, ACHIEVMENT, TIMER, STAY_INVISIBLE, POTENTIAL_DAMAGE, STAY_SPOTTED"/>
-	</enum>
-
 	<enum name="SCENARIO_OBJECT_APPEARANCE" type="Integer">
 		<const name="KEY_OBJECT" 			value="0"/>
 		<const name="ATTENTION_TAG" 		value="1"/>
@@ -823,9 +808,6 @@
 		<const name="impulse_laserMaxDist"/>
 		<const name="axis_laserReloadTime"/>
 		<const name="axis_laserMaxDist"/>
-		<const name="phaser_laserReloadTime"/>
-		<const name="phaser_laserMaxDist"/>
-		<const name="phaser_laserDamage"/>
 		<const name="wavesReloadTime"/>
 		<const name="wavesMaxDist"/>
 
@@ -900,12 +882,6 @@
 		<const name="reloadTimeShot_BurstFire"/>
 
 		<!--
-			Pulse Phaser parameters
-		-->
-		<const name="pulsePhaserMaxDist"/>
-		<const name="ionicPhaserMaxDist"/>
-
-		<!--
 			Anti Missile parameters
 		-->
 		<const name="antiMissileMaxDist"/>
@@ -924,9 +900,9 @@
 		<range name="RANGES_ALL" values="currentVisibilityRange, sonarShipRange, visibilitySmokeRange,
 			visibilityRange, guaranteedShipDetection, hydrophoneRange, aaRangeNear, visibilityPlaneRange, pingerMaxDist,
 			visibilityByShipRangeBase, visibilityBySubmarineAtDepthRange, axis_laserMaxDist, visibilityByShipAtDepthRange,
-			visionRangeAlt, visionRange, shootRange, visibilityInSmokeRangeGK, phaser_laserMaxDist, pulsePhaserMaxDist,
+			visionRangeAlt, visionRange, shootRange, visibilityInSmokeRangeGK,
 			air_supportMaxDist, visibilitySubmarineRange, currentShootTARange, wavesMaxDist, visibilityByPlaneAtDepthRange,
-			visibilityBySubmarineRangeBase, visibilityRangeAlt, ionicPhaserMaxDist, torpedoMaxDist,
+			visibilityBySubmarineRangeBase, visibilityRangeAlt, torpedoMaxDist,
 			visibilityByShipRangeFire, currentVisibilityPlaneRange, visibilityAfterPingByShipRange, atbaMaxDist, aaRangeMax,
 			guaranteedVisibilityRange, visionRangeAtDepth, submarineLocatorRange, charge_laserMaxDist, shootRangesSummary,
 			rlsShipRange, aaRangeMid, impulse_laserMaxDist, sonarTorpedoRange, torpedoDetection, aaRangeFar,
@@ -934,14 +910,14 @@
 		"/>
 
 		<range name="MINIMAP_RANGES" values="artilleryMaxDist, torpedoMaxDist, atbaMaxDist, pingerMaxDist,
-			charge_laserMaxDist, impulse_laserMaxDist, axis_laserMaxDist, phaser_laserMaxDist, wavesMaxDist, air_supportMaxDist, aaRangeMax,
+			charge_laserMaxDist, impulse_laserMaxDist, axis_laserMaxDist, wavesMaxDist, air_supportMaxDist, aaRangeMax,
 			visibilityRange, visibilityPlaneRange, visibilityRangeAlt, visibilityPlaneRangeAlt, visibilityAfterPingByShipRange,
-			sonarShipRange, rlsShipRange, sonarTorpedoRange, hydrophoneRange, submarineLocatorRange, pulsePhaserMaxDist, ionicPhaserMaxDist, antiMissileMaxDist, missilesMaxDist"/>
+			sonarShipRange, rlsShipRange, sonarTorpedoRange, hydrophoneRange, submarineLocatorRange, antiMissileMaxDist, missilesMaxDist"/>
 
 		<range name="WITH_MINIMAP_OPTION" values="currentVisibilityRange, currentVisibilityPlaneRange, visibilityAfterPingByShipRange,
 			atbaMaxDist, aaRangeMax, sonarShipRange, rlsShipRange, hydrophoneRange, submarineLocatorRange,
 			artilleryMaxDist, currentShootTARange, pingerMaxDist, charge_laserMaxDist, impulse_laserMaxDist,
-			axis_laserMaxDist, phaser_laserMaxDist, wavesMaxDist, air_supportMaxDist, pulsePhaserMaxDist, ionicPhaserMaxDist, antiMissileMaxDist, missilesMaxDist"/>
+			axis_laserMaxDist, wavesMaxDist, air_supportMaxDist, antiMissileMaxDist, missilesMaxDist"/>
 	</enum>
 
 	<enum name="MINIMAP_OPTION_CATEGORY" type="Integer">
@@ -967,13 +943,10 @@
 		<!--Weapons Ranges-->
 		<const name="shootMGRangeEnabled"/>
 		<const name="shootTARangeEnabled"/>
-		<const name="shootPulsePhaserRangeEnabled"/>
-		<const name="shootIonicPhaserRangeEnabled"/>
 		<const name="shootPingerRangeEnabled"/>
 		<const name="shootChargeLaserRangeEnabled"/>
 		<const name="shootImpulseLaserRangeEnabled"/>
 		<const name="shootAxisLaserRangeEnabled"/>
-		<const name="shootPhaserLaserRangeEnabled"/>
 		<const name="shootWaveGunRangeEnabled"/>
 		<const name="shootAirSupportRangeEnabled"/>
 		<const name="shootAntiMissileSystemRangeEnabled"/>
@@ -999,9 +972,8 @@
 			submarineLocatorRangeEnabled, visibilityRangeEnabled, visibilityPlaneRangeEnabled,
 			atbaRangeEnabled, aaRangeMaxEnabled, shootMGRangeEnabled, shootTARangeEnabled,
 			shootPingerRangeEnabled, shootChargeLaserRangeEnabled, shootImpulseLaserRangeEnabled,
-			shootAxisLaserRangeEnabled, shootPhaserLaserRangeEnabled,
-			shootWaveGunRangeEnabled, shootAirSupportRangeEnabled, shootPulsePhaserRangeEnabled,
-			shootIonicPhaserRangeEnabled, shootAntiMissileSystemRangeEnabled, shootMissilesRangeEnabled"/>
+			shootAxisLaserRangeEnabled, shootWaveGunRangeEnabled, shootAirSupportRangeEnabled,
+			shootAntiMissileSystemRangeEnabled, shootMissilesRangeEnabled"/>
 	</enum>
 
 	<enum name="MAP_SECTOR_STATES" type="Integer">  <!-- Keep in sync with systems/tacticalMap/MapSectorStateSettings.py -->
@@ -1070,14 +1042,16 @@
 	<enum name="CONSUMABLE_STATES" type="Integer">
 		<const name="READY"				value="0"	/>
 		<const name="SELECTED"			value="1"	/>
-		<const name="AT_WORK"			value="2"	/>
-		<const name="RELOAD"			value="3"	/>
-		<const name="NO_AMMO"			value="4"	/>
-		<const name="PREPARATION"		value="5"	/>
-		<const name="REGENERATION"		value="6"	/>
+		<const name="WORK_PREPARATION"	value="2"	/>
+		<const name="AT_WORK"			value="3"	/>
+		<const name="RELOAD"			value="4"	/>
+		<const name="NO_AMMO"			value="5"	/>
+		<const name="PREPARATION"		value="6"	/>
+		<const name="REGENERATION"		value="7"	/>
 
-		<range name="WITH_TIME_STATES" values="AT_WORK, RELOAD, PREPARATION, REGENERATION"/>
+		<range name="WITH_TIME_STATES" values="WORK_PREPARATION, AT_WORK, RELOAD, PREPARATION, REGENERATION"/>
 		<range name="RELOADING_STATES" values="RELOAD, PREPARATION, REGENERATION"/>
+		<range name="UI_WORK_STATES" values="WORK_PREPARATION, AT_WORK"/>
 	</enum>
 
 	<enum name="CUSTOM_BATTLE_ELEMENTS" type="BinaryShift">
@@ -1161,7 +1135,6 @@
 		<const name="LASER"				value="laser"/>
 		<const name="WAVE"				value="wave"/>
 		<const name="AIR_SUPPORT"		value="air_support"/>
-		<const name="PULSE_PHASER"		value="pulse_phaser"/>
 		<const name="ANTI_MISSILE"		value="anti_missile"/>
 		<const name="MISSILES"			value="missiles"/>
 	</enum>

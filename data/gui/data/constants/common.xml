@@ -1186,12 +1186,18 @@
 	</enum>
 
 	<enum name="GAME_LOGIC_ACTIVATOR" type="String">
-		<const name="ACHIEVEMENT"			value="AchievementActivator"/>
-		<const name="RIBBON"				value="RibbonActivator"/>
-		<const name="ADJUSTMENT_SHOT"		value="AdjustmentShotActivator"/>
-		<const name="VISIBILITY_CHANGED"	value="VisibilityChangedActivator"/>
-		<const name="TIMER"					value="TimerActivator"/>
-		<const name="POTENTIAL_DAMAGE"		value="PotentialDamageActivator"/>
+		<const name="ACHIEVEMENT"					value="AchievementActivator"/>
+		<const name="RIBBON"						value="RibbonActivator"/>
+		<const name="ADJUSTMENT_SHOT"				value="AdjustmentShotActivator"/>
+		<const name="VISIBILITY_CHANGED"			value="VisibilityChangedActivator"/>
+		<const name="TIMER"							value="TimerActivator"/>
+		<const name="POTENTIAL_DAMAGE"				value="PotentialDamageActivator"/>
+		<const name="DAMAGE_DONE"					value="DamageDoneActivator" />
+		<const name="RECEIVED_DAMAGE"				value="ReceivedDamageActivator" />
+		<const name="DAMAGE_TO_PLANE"				value="DamageToPlaneActivator" />
+		<const name="DAMAGE_SPOTTED"				value="DamageSpottedActivator" />
+
+		<range name="DAMAGE_INCREMENT_TYPES" values="DAMAGE_DONE, RECEIVED_DAMAGE, DAMAGE_TO_PLANE, DAMAGE_SPOTTED"/>
 	</enum>
 
 	<enum name="GAME_LOGIC_ACTION" type="String">
@@ -1428,6 +1434,34 @@
 		<const name="LEGENDARY_UNSELECTED"		value="ub1:ship_filter_rarity_legendary_unselected"/>
 	</enum>
 
+	<enum name="BATTLE_TABS_STATISTICS" type="String">
+		<const name="TASKS_TAB_DISPLAYED"				value="ub1:battle_tabs_statistics_tasks_tab_displayed"/>
+		<const name="TEAMS_TAB_DISPLAYED"				value="ub1:battle_tabs_statistics_teams_tab_displayed"/>
+		<const name="DIVISIONS_TAB_DISPLAYED"			value="ub1:battle_tabs_statistics_divisions_tab_displayed"/>
+		<const name="TASKS_TAB_SELECTED"				value="ub2:battle_tabs_statistics_tasks_tab_selected"/>
+		<const name="TEAMS_TAB_SELECTED"				value="ub2:battle_tabs_statistics_teams_tab_selected"/>
+		<const name="DIVISIONS_TAB_SELECTED"			value="ub2:battle_tabs_statistics_divisions_tab_selected"/>
+		<const name="JOIN_DIVISION_CLICKED"				value="ub1:battle_tabs_statistics_join_division_clicked"/>
+		<const name="JOIN_NEW_DIVISION_CLICKED"			value="ub1:battle_tabs_statistics_join_new_division_clicked"/>
+		<const name="RESTRICT_JOIN_ENABLED"				value="ub1:battle_tabs_statistics_restrict_join_enabled"/>
+		<const name="RESTRICT_JOIN_DISABLED"			value="ub1:battle_tabs_statistics_restrict_join_disabled"/>
+	</enum>
+
+	<enum name="LOADING_SCREEN_BATTLE_TABS_STATISTICS" type="String">
+		<const name="TASKS_TAB_DISPLAYED"			value="ub1:loading_screen_battle_tabs_tasks_tab_displayed"/>
+		<const name="TEAMS_TAB_DISPLAYED"			value="ub1:loading_screen_battle_tabs_teams_tab_displayed"/>
+		<const name="TIPS_TAB_DISPLAYED"			value="ub1:loading_screen_battle_tabs_tips_tab_displayed"/>
+		<const name="DIVISIONS_TAB_DISPLAYED"		value="ub1:loading_screen_battle_tabs_divisions_tab_displayed"/>
+		<const name="TASKS_TAB_SELECTED"			value="ub2:loading_screen_battle_tabs_tasks_tab_selected"/>
+		<const name="TEAMS_TAB_SELECTED"			value="ub2:loading_screen_battle_tabs_teams_tab_selected"/>
+		<const name="TIPS_TAB_SELECTED"				value="ub2:loading_screen_battle_tabs_tips_tab_selected"/>
+		<const name="DIVISIONS_TAB_SELECTED"		value="ub2:loading_screen_battle_tabs_divisions_tab_selected"/>
+		<const name="JOIN_DIVISION_CLICKED"			value="ub1:loading_screen_battle_tabs_join_division_clicked"/>
+		<const name="JOIN_NEW_DIVISION_CLICKED"		value="ub1:loading_screen_battle_tabs_join_new_division_clicked"/>
+		<const name="RESTRICT_JOIN_ENABLED"			value="ub1:loading_screen_battle_tabs_restrict_join_enabled"/>
+		<const name="RESTRICT_JOIN_DISABLED"		value="ub1:loading_screen_battle_tabs_restrict_join_disabled"/>
+	</enum>
+
 	<enum name="GF_LOOTBOX_TIP_STATS" type="String">
 		<const name="BUTTON_NEXT"						value="gf:guiding_tip_next"/>
 		<const name="BUTTON_FINISH"						value="gf:guiding_tip_finish"/>
@@ -1647,5 +1681,19 @@
 		<const name="COLLECTION_CARD_DESCRIPTION_VIEWED"	value="ub1:collection_view_card_description"/>
 		<const name="COLLECTION_CARD_VIDEO_PLAYED"			value="ub1:collection_play_card_video"/>
 		<const name="COLLECTION_METASHOP_OPENED"			value="ub1:collection_open_metashop"/>
+	</enum>
+
+	<enum name="SYSTEM_MESSAGE_STATISTICS_ACTION" type="String">
+		<const name="SHOWN"							value="notification_showed"/>
+		<const name="EXPIRED"						value="notification_expired"/>
+		<const name="CLICKED"						value="notification_clicked"/>
+		<const name="CLOSE"							value="close_notification"/>
+
+		<range name="ALL_ACTIONS"	values="SHOWN, EXPIRED, CLICKED, CLOSE"/>
+		<range name="PREVENTS_EXPIRATION"			values="CLICKED, CLOSE"/>
+	</enum>
+
+	<enum name="SYSTEM_MESSAGE_STATISTICS_CATEGORY" type="String">
+		<const name="WSCLANS"						value="wsclans"/>
 	</enum>
 </constants>
