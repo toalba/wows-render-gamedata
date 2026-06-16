@@ -174,6 +174,13 @@
     "nation": "Russia",
     "species": "Cruiser"
   },
+  "3309254640": {
+    "index": "PASB940",
+    "level": 10,
+    "name": "PASB940_250TH_Wisconsin",
+    "nation": "USA",
+    "species": "Battleship"
+  },
   "3315513040": {
     "index": "PJSC934",
     "level": 10,
@@ -501,6 +508,13 @@
     "level": 9,
     "name": "PBSC909_Pirate_Neptune",
     "nation": "United_Kingdom",
+    "species": "Cruiser"
+  },
+  "3341727728": {
+    "index": "PASC909",
+    "level": 9,
+    "name": "PASC909_250TH_Fort_Worth",
+    "nation": "USA",
     "species": "Cruiser"
   },
   "3341759696": {
@@ -1735,6 +1749,13 @@
     "nation": "Europe",
     "species": "Cruiser"
   },
+  "3550393680": {
+    "index": "PVSC710",
+    "level": 10,
+    "name": "PVSC710_Almirante_Irizar",
+    "nation": "Pan_America",
+    "species": "Cruiser"
+  },
   "3550393712": {
     "index": "PUSC710",
     "level": 10,
@@ -1908,6 +1929,13 @@
     "level": 9,
     "name": "PZSB709_Taihang",
     "nation": "Pan_Asia",
+    "species": "Battleship"
+  },
+  "3551475120": {
+    "index": "PSSB709",
+    "level": 9,
+    "name": "PSSB709_Triunfante",
+    "nation": "Spain",
     "species": "Battleship"
   },
   "3551475152": {
@@ -7076,6 +7104,13 @@
     "nation": "Events",
     "species": "Destroyer"
   },
+  "4274926928": {
+    "index": "PVSD019",
+    "level": 9,
+    "name": "PVSD019_Nueva_Esparta",
+    "nation": "Pan_America",
+    "species": "Destroyer"
+  },
   "4274927440": {
     "index": "PFSD019",
     "level": 9,
@@ -7137,6 +7172,13 @@
     "level": 9,
     "name": "PXSD018_Harugumo_PA",
     "nation": "Events",
+    "species": "Destroyer"
+  },
+  "4275975504": {
+    "index": "PVSD018",
+    "level": 8,
+    "name": "PVSD018_Cuauhtemoc",
+    "nation": "Pan_America",
     "species": "Destroyer"
   },
   "4275976016": {
@@ -7216,6 +7258,13 @@
     "nation": "Events",
     "species": "Destroyer"
   },
+  "4277024080": {
+    "index": "PVSD017",
+    "level": 7,
+    "name": "PVSD017_Marcilio_Dias",
+    "nation": "Pan_America",
+    "species": "Destroyer"
+  },
   "4277024464": {
     "index": "PJSD017",
     "level": 5,
@@ -7293,6 +7342,13 @@
     "nation": "Events",
     "species": "Destroyer"
   },
+  "4278072656": {
+    "index": "PVSD016",
+    "level": 6,
+    "name": "PVSD016_Cervantes",
+    "nation": "Pan_America",
+    "species": "Destroyer"
+  },
   "4278073168": {
     "index": "PFSD016",
     "level": 6,
@@ -7347,6 +7403,13 @@
     "level": 8,
     "name": "PXSD015_Grozovoy_PA",
     "nation": "Events",
+    "species": "Destroyer"
+  },
+  "4279121232": {
+    "index": "PVSD015",
+    "level": 5,
+    "name": "PVSD015_Antioquia",
+    "nation": "Pan_America",
     "species": "Destroyer"
   },
   "4279121744": {
@@ -7620,6 +7683,13 @@
     "level": 7,
     "name": "PXSD010_Blue_Aster2",
     "nation": "Events",
+    "species": "Destroyer"
+  },
+  "4284364112": {
+    "index": "PVSD010",
+    "level": 10,
+    "name": "PVSD010_20_de_Julio",
+    "nation": "Pan_America",
     "species": "Destroyer"
   },
   "4284364496": {

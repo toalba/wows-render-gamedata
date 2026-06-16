@@ -77,6 +77,9 @@
 		<const name="DEFEAT"				value="defeat" />
 		<const name="CREW_VOICEOVER"		value="crew_voice" />
 		<const name="CREW_NATIONLESS"		value="crew_nationless" />
+
+		<const name="DECAL"					value="decal" />
+		<const name="NARRATIVE_CAMPAIGN_REWARD"	value="narrative_campaign_reward" />
 	</enum>
 
 	<enum name="BUTTON_TYPE" type="String">

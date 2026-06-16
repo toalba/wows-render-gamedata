@@ -138,6 +138,10 @@
 		<const name="NY_DECORATIONS_GARLAND"		value="44" />
 		<const name="GRAND_STRATEGY_PASS_REGION"	value="45" />
 		<const name="SIDE_CHOICE_EVENT"				value="46" />
+		<const name="NARRATIVE_CAMPAIGN"			value="47" />
+		<const name="NARRATIVE_CAMPAIGN_CHAPTER"	value="48" />
+		<const name="NARRATIVE_CAMPAIGN_LEVEL"		value="49" />
+		<const name="NARRATIVE_CAMPAIGN_NARRATIVE"	value="50" />
 	</enum>
 
 	<enum name="UBSCOPE_EVENT_DIRECTIONS" type="Integer">
@@ -210,7 +214,8 @@
 		<const name="TORPEDO_RELOADER_BOOSTER"			value="19" />
 		<const name="RAGE_MODE_BOOSTER"					value="20" />
 		<const name="ADD_MODIFIERS"						value="21" />
-		<const name="MANUAL_SECONDARIES_RELOAD_BOOSTER" value="22" />
+		<const name="MANUAL_SECONDARIES_RELOAD_BOOSTER"	value="22" />
+		<const name="ADD_CONSUMABLES_RELOAD_MODIFIERS"	value="23" />
 		<value_to_name/>
 	</enum>
 
@@ -291,6 +296,8 @@
 		<const name="CLAN_BATTLE"			value="ClanBattle"			/>
 		<const name="EVENT_BATTLE"			value="EventBattle"			/>
 		<const name="BRAWL_BATTLE"			value="BrawlBattle"			/>
+
+		<name_to_value/>
 
 		<range name="MAP_TEAMBUILDTYPE_TO_BATTLETYPE" values="RANDOM_BATTLE, TRAINING_BATTLE, COOPERATIVE_BATTLE, INTRO_MISSION, RANKED_BATTLE, CLUB_BATTLE, PVE_BATTLE, PVE_BATTLE, CLAN_BATTLE, EVENT_BATTLE, BRAWL_BATTLE"/>
 		<range name="BATTLE_TYPES_WITH_HARD_FILTER" values="PVE_BATTLE, EVENT_BATTLE, RANKED_BATTLE, CLAN_BATTLE, BRAWL_BATTLE"/>
@@ -498,6 +505,7 @@
 		<const name="DEPTH_CHARGE"			value="8"	/>
 		<const name="MINE"					value="9"	/>
 		<const name="SMOKE"					value="10"	/>
+		<const name="PLANE_DROP"			value="11"	/>
 
 		<value_to_name/>
 		<name_to_value/>
@@ -980,14 +988,15 @@
 		<const name="WOWS_PREMIUM"		value="wows_premium"/>
 		<const name="PREMIUM"			value="premium"/>
 
-		<const name="CAMOUFLAGE"		value="Camouflage"/>
-		<const name="SIGNALS"			value="Signals"/>
-		<const name="FLAGS"				value="Flags"/>
-		<const name="PERMOFLAGE"		value="Permoflage"/>
-		<const name="SKIN"				value="Skin"/>
-		<const name="MSKIN"				value="MSkin"/>
-		<const name="SHIPDESTRUCTION"	value="ShipDestruction"/>
-		<const name="ENSIGN"			value="Ensign"/>
+		<const name="CAMOUFLAGE"			value="Camouflage"/>
+		<const name="SIGNALS"				value="Signals"/>
+		<const name="FLAGS"					value="Flags"/>
+		<const name="PERMOFLAGE"			value="Permoflage"/>
+		<const name="SKIN"					value="Skin"/>
+		<const name="MSKIN"					value="MSkin"/>
+		<const name="SHIPDESTRUCTION"		value="ShipDestruction"/>
+		<const name="ENSIGN"				value="Ensign"/>
+		<const name="VISUAL_CUSTOMIZATION"	value="VisualCustomization"/>
 
 		<const name="SLOTS"				value="slots"/>
 
@@ -1421,6 +1430,18 @@
 		<const name="SELECT_REWARD"	value="ub2:event_page_modern_era_select_reward"/>
 	</enum>
 
+	<enum name="VISUAL_CUSTOMIZATION_STATISTICS" type="String">
+		<const name="ROUTE_HAS_RESTRICTIONS"	value="ub2:visual_customization_route_has_restrictions"/>
+		<const name="ROUTE_HAS_NO_RESTRICTIONS"	value="ub2:visual_customization_route_has_no_restrictions"/>
+
+		<const name="OPEN_NODE_BY_2D"			value="ub2:visual_customization_open_node_by_2d"/>
+		<const name="OPEN_NODE_BY_3D"			value="ub2:visual_customization_open_node_by_3d"/>
+
+		<const name="DISMOUNT_ALL_CONFIRMATION"	value="ub2:visual_customization_dismount_all_action_confirmation"/>
+
+		<const name="MODAL_WINDOW_LINK"			value="ub2:visual_customization_modal_window_link"/>
+	</enum>
+
 	<enum name="SHIP_FILTERS_RARITY_STATISTICS" type="String">
 		<const name="COMMON_SELECTED"			value="ub1:ship_filter_rarity_common_selected"/>
 		<const name="COMMON_UNSELECTED"			value="ub1:ship_filter_rarity_common_unselected"/>
@@ -1673,7 +1694,7 @@
 		<const name="TOP_RIGHT"		value="3"/>
 	</enum>
 
-	<enum name="COLLECTIONS_STATISTICS" type="String">
+    <enum name="COLLECTIONS_STATISTICS" type="String">
 		<const name="COLLECTION_OPENED"						value="ub1:collection_open"/>
 		<const name="COLLECTION_SUBSCRIPTION_ENABLED"		value="ub1:collection_subscription_on"/>
 		<const name="COLLECTION_SUBSCRIPTION_DISABLED"		value="ub1:collection_subscription_off"/>
@@ -1695,5 +1716,13 @@
 
 	<enum name="SYSTEM_MESSAGE_STATISTICS_CATEGORY" type="String">
 		<const name="WSCLANS"						value="wsclans"/>
+	</enum>
+
+	<enum name="SHIP_NODE_NAMES" type="String">
+		<const name="VISUAL_CUSTOMIZATION"	value="VisualCustomization"/>
+	</enum>
+
+	<enum name="SHIP_NODE_TYPES" type="String">
+		<const name="VISUAL_CUSTOMIZATIONS"	value="visualCustomizations"/>
 	</enum>
 </constants>

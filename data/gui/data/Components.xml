@@ -1132,22 +1132,6 @@
 		<event		name="evChanged"/>
 	</component>
 
-	<component name="Patrol">
-		<property	name="patrolName"		type="String"	pk="true"	/>
-		<property	name="title"				type="String"	/>
-		<property	name="description"			type="String"	/>
-		<property	name="startsAt"				type="Number"	/>
-		<property	name="endsAt"				type="Number"	/>
-		<property	name="revision"				type="Number"	/>
-		<property	name="order"				type="Number"	/>
-		<property	name="iconSmall"			type="String"	/>
-		<property	name="iconLarge"			type="String"	/>
-
-		<event		name="evChanged"/>
-	</component>
-
-
-
 	<!-- === B A T T L E === -->
 
 	<!-- Squadrons -->
@@ -1399,7 +1383,7 @@
 
 	<component name="VehicleInfo">
 		<property name="id" type="Number" pk="true"/> <!-- Vehicle.id -->
-		<property name="shipInfoEntityId" type="Integer"/>
+		<property name="shipInfoEntityId" type="EntityId"/>
 
 		<event		name="evShipInfoEntityIdChanged"	/>
 	</component>
@@ -1442,7 +1426,7 @@
 	</component>
 
 	<component name="MinimapAttentionPoint">
-		<property	name="avatarId"				type="Integer"/>
+		<property	name="avatarId"				type="EntityId"/>
 	</component>
 
 	<component	name="Health"	>
@@ -1567,7 +1551,7 @@
 	</component>
 
 	<component	name="Parameter"	>
-		<property 	name="ownerID"						type="Number" pk="true"/>
+		<property 	name="ownerID"						type="EntityId" pk="true"/>
 		<property 	name="id" 							type="String" pk="true"/>
 		<property	name="baseValue"					type="Number"		/>
 		<property	name="currentValue"					type="Number"		/>
@@ -1621,7 +1605,7 @@
 	</component>
 
 	<component name = "DiplomacyTicket">
-		<property name="avatarId"	type="Integer" pk="true"/>
+		<property name="avatarId"	type="EntityId" pk="true"/>
 		<property name="type"		type="Integer"/>
 	</component>
 
@@ -2024,6 +2008,7 @@
 		<property name="viewData"			type="ConsumableSlotData"/>
 
 		<property name="state"				type="Integer"/>
+		<property name="buffName"			type="String" sync="false"/>
 		<property name="isLocked"			type="Boolean"/>
 		<property name="currentCharge"		type="Number"/>
 
@@ -2190,7 +2175,7 @@
 
 	</component>
 
-	<component	name="BuffDisplay"	></component> <!--Pinata 2024-->
+	<component	name="BuffState"	/>
 
 	<component	name="CapturePointWorldView"		sync="false">
 		<property	name="id"					type="Integer"/>
@@ -2255,7 +2240,7 @@
 
 	<component	name="State"		>
 		<property	name="id"					type="String"		pk="true"/>
-		<property	name="ownerId"				type="Integer"		pk="true"/>
+		<property	name="ownerId"				type="EntityId"		pk="true"/>
 		<property	name="squadronOwnerId"		type="Integer"		default="-1" pk="true"/>
 		<property	name="type"					type="Integer"		/> <!-- category -->
 		<property	name="status"				type="Integer"		/>
@@ -2677,10 +2662,8 @@
 	<component name="Clanman">
 		<property	name="clanId"				type="Integer"	/>
 		<property	name="role"					type="String"	/> <!-- @see  clans_constants.CLAN_ROLE-->
-		<property	name="patrolName"			type="String"	/>
 		<event		name="evClanIdChanged"						/>
 		<event		name="evRoleChanged"						/>
-		<event		name="evPatrolNameChanged"				/>
 	</component>
 
 	<component name="ClanmanSupplyInfo">
@@ -2820,6 +2803,12 @@
 	</component>
 
 	<component	name="CountComponent">
+		<property	name="value"			type="Integer"/>
+		<event		name="evUpdate"/>
+		<event name="evChanged"/>
+	</component>
+
+	<component	name="ExtraCountComponent">
 		<property	name="value"			type="Integer"/>
 		<event		name="evUpdate"/>
 		<event name="evChanged"/>
@@ -3123,10 +3112,10 @@
 
 		<property	name="sigLimit"				type="Integer"		/>
 		<property	name="ensignLimit"			type="Integer"		/>
-		<property	name="ensignAvailables"		type="Dictionary"	/>	<!-- nation: entityId -->
-		<property	name="camouflgeAvailables"	type="Dictionary"	 sync="false"/>	<!-- nation: entityId -->
+		<property	name="ensignAvailables"		type="Dictionary"	contains="String, EntityId"/>	<!-- nation: entityId -->
+		<property	name="camouflgeAvailables"	type="Dictionary"	contains="String, EntityId" sync="false"/>	<!-- nation: entityId -->
 		<property	name="canEquipCamouflage"	type="Boolean"		/>
-		<property	name="canEquipShipDestruction"	type="Boolean"	/>
+		<property	name="canEquipOtherExteriors"	type="Boolean"	/>
 		<property	name="autopurchaseCamouflage"	type="Boolean"	/>
 		<property	name="autoequipBestCamoboosts"	type="Boolean"	/>
 		<property	name="autopurchaseCamoboosts"	type="Boolean"	/>
@@ -3182,6 +3171,8 @@
 
 	<component name="InstalledCamouflage"/>
 
+	<component name="IsModifiedGeometry"/>
+
 	<component name="OwnShipDestruction">
 		<property	name="id"						type="Number"	pk="true"/>
 		<property	name="isLinkedToShip"			type="Boolean"/>
@@ -3192,6 +3183,35 @@
 	</component>
 
 	<component name="InstalledShipDestruction"/>
+
+	<component	name="VisualCustomizationAvailability">
+		<property name="hasDecalsInStorageOrLinked"				type="Boolean" default="false"/>
+		<property name="isShipAvailableForVisualCustomization"	type="Boolean" />
+		<property name="isInstalledMeshSkin"					type="Boolean" />
+		<property name="hasInstalledDecalsInPoints"				type="Boolean" />
+
+		<event name="evMoveToVisualCustomization"/>
+
+		<event name="evUpdate"/>
+	</component>
+
+	<component name="OwnDecal">
+		<property	name="id"							type="Number"	pk="true"/>
+		<property	name="index"						type="String"/>
+		<property	name="hasAnotherSlot"				type="Boolean"/>
+		<property	name="customizationType"			type="String"/>
+		<property	name="customizationTags"			type="Array"/>
+		<property	name="restrictions"					type="Dictionary"/>
+		<property	name="isAvailableForNode"			type="Boolean"/>
+		<property	name="mountPointsNames"				type="Array"/>
+		<property	name="isHidden"						type="Boolean"/>
+
+		<event name="evUpdated"/>
+	</component>
+
+	<component name="LinkedDecal"/>
+
+	<component name="StorageVisible"/>
 
 	<component name="Signal">
 		<property	name="id"				type="Number"	pk="true"/>
@@ -3468,7 +3488,7 @@
 	<component name="BattleType">
 		<property 	name="type"					type="String"	pk="true"/>
 		<property 	name="battleTypeGameParamId" type="Number"	pk="true"/> <!-- gameParamId конкретного ивента/операции для отличия от другого ивента/операции -->
-		<property 	name="restrictionEntityId"	type="Integer"	/>
+		<property 	name="restrictionEntityId"	type="EntityId"	/>
 		<property 	name="featureId"			type="Integer"	/>
 		<property 	name="status"				type="Integer"	/>
 		<property 	name="minPlayersInDivision"	type="Integer"	/>
@@ -4214,7 +4234,7 @@
 	</component>
 
 	<component name="Parent"  sync="false">
-		<property name="entityId" type="Integer"/>
+		<property name="entityId" type="EntityId"/>
 	</component>
 
 	<!-- Battle data marker component-->
@@ -4334,7 +4354,7 @@
 	<component name="TopRibbon"/>
 
 	<component name="TempRibbon">
-		<property name="entityId" type="Integer"/>
+		<property name="entityId" type="EntityId"/>
 		<property name="positionIndex" type="Integer"/>
 
 		<event name="evPositionIndexChanged"/>
@@ -5365,7 +5385,7 @@
 	<component name="EquipmentSlot">
 		<property name="type"			   	type="Integer" 	pk="true"/>
 		<property name="subCollectionKey"   type="Integer" 	pk="true"/>
-		<property name="installedEntityId"  type="Integer"/>
+		<property name="installedEntityId"  type="EntityId"/>
 		<property name="bestItemTypeInSlot" type="Integer" 	default="0"/>
 		<property name="squadType"  		type="String" 	pk="true"/>
 		<property name="commandId"			type="Integer"	/>
@@ -5609,7 +5629,7 @@
 
 	<component name="Route">
 		<property name="name"				type="String"   pk="true"/>
-		<property name="parentId"			type="Integer" sync="false"/>	<!-- entityId -->
+		<property name="parentId"			type="EntityId" sync="false"/>	<!-- entityId -->
 		<property name="root"				type="String" sync="false"/>		<!-- route name -->
 		<property name="level"				type="Integer" sync="false"/>
 		<property name="children"			type="Array"/> <!-- Route entity id -->
@@ -6502,8 +6522,8 @@
 		<property name="isActiveInEvent"					type="Boolean"/>
 		<property name="cardType"							type="String"/>
 		<property name="slot"								type="Integer"/>
-		<property name="activePersonalCardBonusEntityID"	type="Integer"/>
-		<property name="activeCommonCardBonusEntityID"		type="Integer"/>
+		<property name="activePersonalCardBonusEntityID"	type="EntityId"/>
+		<property name="activeCommonCardBonusEntityID"		type="EntityId"/>
 
 		<event name="evChanged"/>
 	</component>
@@ -6518,7 +6538,7 @@
 	</component>
 
 	<component name="BattleCardAgainstShip">
-		<property name="cardEntityId"				type="Number"/>
+		<property name="cardEntityId"				type="EntityId"/>
 	</component>
 
 	<component name="BattleCardBonus">
@@ -6583,7 +6603,7 @@
 		<property	name="serverPhaseIndex"				type="Integer" sync="false"/>
 		<property	name="hasOwnSpace"					type="Boolean"/>
 		<property	name="unseenPhaseConfigIdxList"		type="Array" contains="Integer"/>
-		<property	name="valuableRewardsEntityID"		type="Integer"/>
+		<property	name="valuableRewardsEntityID"		type="EntityId"/>
 		<property	name="eventBattleIDList"			type="Array" contains="Number"/>
 
 		<event		name="evChanged"/>
@@ -6616,10 +6636,10 @@
 	</component>
 
 	<component name="EventHubPostBattle">
-		<property	name="nextRewardsStackEntityID"			type="Integer"/>
+		<property	name="nextRewardsStackEntityID"			type="EntityId"/>
 		<property	name="pointsForNextLevel"				type="Integer"/>
-		<property	name="cardsRewardsStackEntityID"		type="Integer"/>
-		<property	name="otherRewardsStackEntityID"		type="Integer"/>
+		<property	name="cardsRewardsStackEntityID"		type="EntityId"/>
+		<property	name="otherRewardsStackEntityID"		type="EntityId"/>
 	</component>
 
 	<component name="InteractiveObject">
@@ -6917,10 +6937,27 @@
 
 	<component name="MiniDockyardWindowData">
 		<property	name="seasonID"					type="String"/>
-		<property	name="selectedBranchEntityId"	type="Number"/>
-		<property	name="selectedShipEntityId"		type="Number"/>
+		<property	name="selectedBranchEntityId"	type="EntityId"/>
+		<property	name="selectedShipEntityId"		type="EntityId"/>
 
 		<event name="evChanged"/>
+	</component>
+
+	<component name="VisualCustomizationNode">
+		<property	name="nodeName"					type="String"	pk="true"/>
+		<property	name="customizationTags"		type="Array"/>
+		<property	name="customizationId"			type="Number"/>
+		<property	name="isVisible"				type="Boolean"/>
+		<property	name="isLinked"					type="Boolean"	default="true"/>
+		<property	name="isHighlight"				type="Boolean"	default="false"/>
+		<property	name="side"						type="String"/>
+		<property	name="group"					type="String"/>
+
+		<event name="evUpdated"/>
+		<event name="evIsVisibleChanged"/>
+		<event name="evIsHighlightChanged"/>
+		<event name="evStateChanged"/>
+		<event name="evMoveToNode"/>
 	</component>
 
 	<component name="GrandStrategyPass">
@@ -6958,33 +6995,89 @@
 	</component>
 
 	<component name="Hub2D">
-		<property name="id"				type="String"	pk="true"/>
-		<property name="startTime"		type="Number"/>
-		<property name="finishTime"		type="Number"/>
-		<property name="sizeType"		type="String"/>
+		<property name="id"							type="String"	pk="true"/>
+		<property name="startTime"					type="Number"/>
+		<property name="finishTime"					type="Number"/>
+		<property name="sizeType"					type="String"/>
+		<property name="entryPointImageUrl"			type="String"/>
+		<property name="entryPointRewardImageUrl"	type="String"/>
+		<property name="backgroundImageUrl"			type="String"/>
 
 		<event name="evChanged"/>
 	</component>
 
-	<component name="Hub2DBanner">
-		<property name="id"			type="String"	pk="true"/>
-		<property name="hub2dId"	type="String"/>
-		<property name="startTime"	type="Number"/>
-		<property name="finishTime"	type="Number"/>
-		<property name="type"		type="Number"/>
-		<property name="section"	type="String"/>
-		<property name="sortOrder"	type="Number"/>
-		<property name="data"		type="Dictionary"/>
-		<property name="uiEvents"	type="Array"/>
-		<property name="levelBlockerNumber"	type="Number"/>
+	<component name="Hub2DBannerBaseData">
+		<property name="id"					type="String"	pk="true"/>
+		<property name="hub2dId"			type="String"/>
+		<property name="bannerType"			type="Number"/>
+		<property name="sectionType"		type="String"/>
+		<property name="sectionSortOrder"	type="Number"/>
+		<property name="tooltipRenderer"	type="String"/>
 
 		<event name="evChanged"/>
-
 	</component>
 
-	<component name="Hub2DBannerHighlightData">
-		<property	name="isHighlight"		type="Boolean"/>
+	<component name="Hub2DBannerBlockData">
+		<property name="levelBlockerNumber"		type="Number"	default="0"/>
+		<property name="isBlockedByLevel"		type="Boolean"	default="false"/>
 
+		<property name="dateBlockerStartsAt"	type="Number"	default="0"/>
+		<property name="dateBlockerEndsAt"		type="Number"	default="0"/>
+		<property name="isBlockedByTime"		type="Boolean"	default="false"/>
+
+		<property name="isVisible"				type="Boolean"/>
+		<property name="isNewMarkerAvailable"	type="Boolean"/>
+		<property name="isBlockedByDependency"	type="Boolean"	default="false"/>
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerRewardData">
+		<property name="hasReward"						type="Boolean"/>
+		<property name="rewardAvailableLocalizationIDS"	type="String"/>
+		<property name="rewardClaimedLocalizationIDS"	type="String"/>
+
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerUnifiedStatusData">
+		<property name="unifiedStatus"	type="String"/>
+
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerProgressData">
+		<property name="currentValue"				type="Number"/>
+		<property name="thresholdValue"				type="Number"/>
+		<property name="availableValue"				type="Number"/>
+		<property name="barProgress"				type="Number"/>
+		<property name="neededValue"				type="Number"/>
+		<property name="amountLocalizationIDS"		type="String"/>
+		<property name="progressLocalizationIDS"	type="String"/>
+		<property name="finishTime"					type="Number"/>
+
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerContentData">
+		<property name="titleLocalizationIDS"		type="String"/>
+		<property name="descriptionLocalizationIDS"	type="String"/>
+		<property name="imageUrl"					type="String"/>
+		<property name="expImageUrl"				type="String"/>
+		<property name="statusLocalizationIDS"		type="String"/>
+		<property name="mouseInstructionIDS"		type="String"/>
+
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerTokenData">
+		<property name="isTokenReceived"			type="Boolean" default="false"/>
+		<property name="isUIInteractionDisabled"	type="Boolean" default="false"/>
+
+		<event name="evChanged"/>
+	</component>
+
+	<component name="Hub2DBannerBattleData">
+		<property	name="currentBattleEntityId"	type="Number"/>
 		<event name="evChanged"/>
 	</component>
 
@@ -7013,7 +7106,7 @@
 
 	<component name="EventShopShipItem">
 		<property name="shipId"					type="Number"	pk="true"/>
-		<property name="eventShopItemEntityId"	type="Number"/>
+		<property name="eventShopItemEntityId"	type="EntityId"/>
 		<property name="sortOrder"		type="Integer"/>
 
 		<event name="evChanged"/>
@@ -7060,4 +7153,72 @@
 		<property name="actions"				type="Array" contains="String"/>
 		<event name="evChanged"/>
 	</component>
+
+	<component name="SelectedTacticalConsumable">
+		<property name="entityId"			type="Integer" default="-1"/>
+		<property name="buffName"			type="String"/>
+		<event name="evEntityIdChanged"/>
+		<event name="evBuffNameChanged"/>
+	</component>
+
+	<component name="NarrativeCampaign">
+		<property	name="id"								type="String"	pk="true"/>
+		<property	name="startTime"						type="Integer"/>
+		<property	name="finishTime"						type="Integer"/>
+		<property	name="currencyID"						type="String"/>
+		<property	name="view"								type="Dictionary"/>
+		<property	name="sseTags"							type="Array"/>
+		<property	name="hasUnseenNarrative"				type="Boolean"	default="false"/>
+		<event name="evNarrativeUnseenStatusUpdated"/>
+		<event name="evChanged"/>
+	</component>
+
+	<component name="NarrativeCampaignChapter">
+		<property	name="id"								type="String"	pk="true"/>
+		<property	name="narrativeCampaignID"				type="String"	pk="true"/>
+		<property	name="startTime"						type="Integer"/>
+		<property	name="cardOptions"						type="Dictionary"/>
+		<property	name="currentProgressStageID"			type="String"	default="''"/>
+		<property	name="currentNarrativeStageID"			type="String"	default="''"/>
+
+		<event name="evProgressUpdated"/>
+		<event name="evNarrativeUpdated"/>
+	</component>
+
+	<component name="NarrativeCampaignLevel">
+		<property	name="idx"								type="Integer"	pk="true"/>
+		<property	name="chapterID"						type="String"	pk="true"/>
+		<property	name="narrativeCampaignID"				type="String"	pk="true"/>
+		<property	name="stageID"							type="String"/>
+		<property	name="isCompleted"						type="Boolean"	default="false"/>
+		<property	name="isClaimed"						type="Boolean"	default="false"/>
+		<property	name="points"							type="Integer"	default="0"/>
+		<property	name="goalPoints"						type="Integer"/>
+		<property	name="claimNumber"						type="Integer"	default="0"/>
+		<property	name="rewardStack"						type="Integer"/>
+	</component>
+
+	<component name="NarrativeCampaignStage">
+		<property	name="id"								type="String"	pk="true"/>
+		<property	name="chapterID"						type="String"	pk="true"/>
+		<property	name="narrativeCampaignID"				type="String"	pk="true"/>
+		<property	name="idx"								type="Integer"/>
+		<property	name="mainProgressionLevelIndices"		type="Array"/>
+		<property	name="textOptions"						type="Dictionary"/>
+	</component>
+
+	<component name="NarrativeCampaignNarrative">
+		<property	name="id"								type="String"	pk="true"/>
+		<property	name="stageID"							type="String"	pk="true"/>
+		<property	name="chapterID"						type="String"	pk="true"/>
+		<property	name="narrativeCampaignID"				type="String"	pk="true"/>
+		<property	name="idx"								type="Integer"/>
+		<property	name="type"								type="String"/>
+		<property	name="params"							type="Dictionary"/>
+	</component>
+
+	<component name="NarrativeCampaignPPLevel"/>
+
+	<component name="NarrativeCampaignCurrentLevel"/>
+
 </components>

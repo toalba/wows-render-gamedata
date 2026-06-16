@@ -47,6 +47,7 @@
 		<const name="UNIVERSAL_COLLECTION_CARD"	value="universal_collection_card"	/>
 		<const name="COLLECTION_CARD"			value="collection_card"				/>
 		<const name="SHIP_DESTRUCTION"			value="ship_destruction"			/>
+		<const name="VISUAL_CUSTOMIZATION"		value="visual_customization"		/>
 		<const name="OTHER"						value="other"						/>
 	</enum>
 

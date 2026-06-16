@@ -12,7 +12,6 @@
 		<const name="NEWBIE_QUEST_INFORMER" value="146"/>
 		<const name="BATTLEPASS_REFRESH" value="1"/>
 		<const name="EVENT_HUB_NEW_PHASE" value="168"/>
-		<const name="PATROLS_CHANGED" value="169"/>
 	</enum>
 
 	<enum name="SYS_MESSAGE_OPERATION" type="String">
@@ -66,7 +65,6 @@
 		<const name="PREMSHOP"		value="premiumshop"	/>
 		<const name="WGNC"			value="wgnc"		/>
 		<const name="CLANSTARS"		value="clanstars"	/>
-		<const name="CLANPATROLS"	value="clanpatrols"	/>
 		<const name="ADVENT"		value="advent"		/>
 		<const name="MERCATOR"		value="mercator"	/>
 	</enum>

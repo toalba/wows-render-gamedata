@@ -7,6 +7,7 @@
 		<const name="MSKIN"				value="3"/>
 		<const name="SIGNAL"			value="4"/>
 		<const name="SHIP_DESTRUCTION"	value="5"/>
+		<const name="VISUAL_CUSTOMIZATION"	value="8"/>
 		<value_to_name/>
 	</enum>
 
@@ -17,6 +18,7 @@
 			<const name="MSKIN"				value="mskin"/>
 			<const name="SIGNAL"			value="flags"/>
 			<const name="SHIP_DESTRUCTION"	value="ship_destruction"/>
+			<const name="VISUAL_CUSTOMIZATION"	value="visual_customization"/>
 	</enum>
 
 	<enum name="CAMO_TYPE"			type="String">
@@ -45,4 +47,32 @@
         <const name="CAMOUFLAGE"    value="CAMOUFLAGE_GROUP"/>
         <const name="TILEFLAGE"     value="TILEFLAGE_GROUP" />
     </enum>
+
+	<enum name="VISUAL_CUSTOMIZATION_NODES_SIDE" type="String">
+		<const name="NONE"			value="none"	/>
+		<const name="RIGHT"			value="right"	/>
+		<const name="LEFT"			value="left"	/>
+		<const name="CENTER"		value="center"	/>
+
+		<range name="SORT_ORDER" 	values="RIGHT, LEFT, CENTER"/>
+	</enum>
+
+	<enum name="VISUAL_CUSTOMIZATION_NODES_GROUP" type="String">
+		<const name="NONE"							value="none"	/>
+		<const name="STERN_1"						value="stern_1"	/>
+		<const name="HULL_1"						value="hull_1"	/>
+		<const name="BOW_1"							value="bow_1"	/>
+		<const name="SUPERSTRUCTURE_1"				value="superstructure_1"/>
+		<const name="PIPE_1"						value="pipe_1"	/>
+
+		<range name="SORT_ORDER" 	values="STERN_1, HULL_1, BOW_1, SUPERSTRUCTURE_1, PIPE_1"/>
+	</enum>
+
+	<enum name="VISUAL_CUSTOMIZATION_SORTING_GROUP" type="String">
+		<const name="NATIONS"					value="nations"			/>
+		<const name="ARTS"						value="arts"			/>
+		<const name="QUOTES"					value="quotes"			/>
+
+		<range name="SORT_ORDER"	values="NATIONS, ARTS, QUOTES"/>
+	</enum>
 </constants>

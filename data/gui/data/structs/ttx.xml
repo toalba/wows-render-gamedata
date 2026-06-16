@@ -1,4 +1,4 @@
-<structs pyTemplate="StructTTX.py.jinja2"  asTemplate="StructTTX.as.jinja2">
+<structs pyTemplate="StructTTX.py.jinja2"  asTemplate="StructTTX.as.jinja2" tsTemplate="ts/StructTTX.ts.jinja2">
 
 	<struct name="ShipTTX">
 		<property	name='subtype'			type="String"/>

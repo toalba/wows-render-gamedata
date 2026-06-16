@@ -212,6 +212,23 @@
 		<const name="UNINSTALL" 					value="uninstallShipDestruction"	/>
 	</enum>
 
+	<enum name="DECAL_ACTIONS" type="String">
+		<const name="INSTALL" 			value="installDecal"		/>
+		<const name="UNINSTALL" 		value="uninstallDecal"		/>
+		<const name="UNINSTALL_ALL" 	value="uninstallAllDecals"	/>
+		<const name="ENABLE_PREVIEW" 	value="previewDecal"		/>
+		<const name="DISABLE_PREVIEW"	value="disablePreviewDecal"	/>
+		<const name="LINK"				value="linkAndInstallDecal"	/>
+	</enum>
+
+	<enum name="DECAL_CONTROL_BUTTONS" type="String">
+		<const name="APPROVE" 						value="approve"				/>
+		<const name="REPLACE" 						value="replace"				/>
+		<const name="REMOVE" 						value="remove"				/>
+
+		<range name="SORT_ORDER"					values="APPROVE, REPLACE, REMOVE"/>
+	</enum>
+
 	<enum name="ECOBOOST_ACTIONS" type="String">
 		<const name="INSTALL" 						value="installEcoBoost"				/>
 		<const name="UNINSTALL" 					value="uninstallEcoBoost"			/>
@@ -271,6 +288,7 @@
 		<const name="GLOBALBOOST" 			value="Globalboost"	/>
 		<const name="ECOBOOST" 				value="Ecoboost"	/>
 		<const name="SHIP_DESTRUCTION" 		value="ShipDestruction"	/>
+		<const name="VISUAL_CUSTOMIZATION" 	value="VisualCustomization"	/>
 	</enum>
 
 	<enum name="CVC_PORT_BANNER_STAGE" type="String">
@@ -352,6 +370,7 @@
 
 	<enum name="STATISTICS_EXPORTER_PROJECTS" type="String">
 		<const name="PORT_LOGS"			value="port_logs"/>
+		<const name="HUB2D_LOGS"		value="hub2d_logs"/>
 	</enum>
 
 	<enum name="PORT_LOGS_EVENTS" type="String">
@@ -366,6 +385,14 @@
 
 	<enum name="SCORE_TIMER_SPECIAL_VALUES" type="Integer">
 		<const name="INFINITE_TIME"		value="999999999"/>
+	</enum>
+
+	<enum name="HUB2D_LOGS_EVENTS" type="String">
+		<const name="HUB2D_WINDOW_OPENED"	value="hub2D_window_opened"/>
+		<const name="HUB2D_WINDOW_CLOSED"	value="hub2D_window_closed"/>
+		<const name="HUB2D_BANNER_CLICKED"	value="hub2D_banner_clicked"/>
+		<const name="HUB2D_TOOLTIP_SHOWN"	value="hub2D_tooltip_shown"/>
+		<const name="HUB2D_TOOLTIP_HIDDEN"	value="hub2D_tooltip_hidden"/>
 	</enum>
 
 </constants>

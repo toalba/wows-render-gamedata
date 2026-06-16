@@ -80,7 +80,7 @@
 			FREE_XP_REPEAT, ECO_BONUSES_REPEAT, LOOTBOXES_REPEAT, CREW_REPEAT, SSE_REPEAT,
 			MODERNIZATION_REPEAT, CAMPAIGN_REPEAT, METASHOP_REPEAT, PVE_REPEAT,
 			WEB_STORAGE_REPEAT, RANK_REPEAT, CLANS_REPEAT"/>
-		
+
 		<range name="COMMON_CHAINS" values="SHIP_ACES, KEYBATTLE_SQUADS, SUPERSHIPS, INVITE_FRIEND,
 		SUBS_IN_METASHOP, PROSPECTIVE_EVENT, RVR_AVAILABLE, RVR_NEW_STAGE,
 		PARAGONS, SHIPYARD, PREMSHOP_SPECIAL, METASHOP_SPECIAL, SNOWFLAKES_EVENT_START,
@@ -109,13 +109,14 @@
 
 		<const name="PVP_INTRO"  					value="10" />
 		<const name="PVP_FINAL" 					value="11" />
-		
+
 		<const name="EXTERIOR_PORT"						value="13" />
 		<const name="EXTERIOR_PERMO_CAMO"				value="14" />
 		<const name="EXTERIOR_INSTALL"					value="15" />
 		<const name="EXTERIOR_TAB_FLAGS"				value="16" />
 		<const name="EXTERIOR_TAB_CONSUMABLE_CAMO"		value="17" />
 		<const name="EXTERIOR_TAB_SHIP_DESTRUCTION"		value="18" />
+		<const name="EXTERIOR_TAB_VISUAL_CUSTOMIZATION"	value="19" />
 
 		<const name="BATTLE_BONUS_INTRO"			value="20" />
 		<const name="BATTLE_BONUS_FINAL"			value="21" />
@@ -166,15 +167,15 @@
 
 		<const name="RANK_INTRO"					value="58" />
 		<const name="RANK_FINAL"					value="59" />
-	
+
 		<const name="CLANS_INTRO"					value="60" />
-		
+
 		<const name="EXTERIOR_CANT_INSTALL_CAMO"	value="61" />
 
 		<const name="EXTERIOR_PORT_SHIP_DESTRUCTION"		value="64" />
 		<const name="EXTERIOR_TAB_SHIP_DESTRUCTION_TAB"		value="65" />
 		<const name="EXTERIOR_TAB_SHIP_DESTRUCTION_ITEM"	value="66" />
-		
+
 		<const name="RESEARCH_INTRO_REPEAT"			value="70" />
 		<const name="RESEARCH_SHIP_REPEAT" 			value="71" />
 		<const name="RESEARCH_CREDITS_REPEAT" 		value="72" />
@@ -185,11 +186,12 @@
 		<const name="PVP_INTRO_REPEAT"  			value="76" />
 		<const name="PVP_FINAL_REPEAT" 				value="77" />
 
-		<const name="EXTERIOR_PORT_REPEAT"					value="79" />
-		<const name="EXTERIOR_PERMO_CAMO_REPEAT"			value="80" />
-		<const name="EXTERIOR_TAB_FLAGS_REPEAT"				value="81" />
-		<const name="EXTERIOR_TAB_CONSUMABLE_CAMO_REPEAT"	value="82" />
-		<const name="EXTERIOR_TAB_SHIP_DESTRUCTION_REPEAT"	value="83" />
+		<const name="EXTERIOR_PORT_REPEAT"						value="79" />
+		<const name="EXTERIOR_PERMO_CAMO_REPEAT"				value="80" />
+		<const name="EXTERIOR_TAB_FLAGS_REPEAT"					value="81" />
+		<const name="EXTERIOR_TAB_CONSUMABLE_CAMO_REPEAT"		value="82" />
+		<const name="EXTERIOR_TAB_SHIP_DESTRUCTION_REPEAT"		value="83" />
+		<const name="EXTERIOR_TAB_VISUAL_CUSTOMIZATION_REPEAT"	value="84" />
 
 		<const name="BATTLE_BONUS_INTRO_REPEAT"		value="85" />
 		<const name="BATTLE_BONUS_FINAL_REPEAT"		value="86" />
@@ -268,18 +270,18 @@
 
 		<const name="PARAGONS_INTRO"				value="250" />
 		<const name="SHIPYARD_INTRO"				value="251" />
-		
+
 		<const name="SUPERSHIPS"					value="252" />
-		
+
 		<const name="SNOWFLAKES_EVENT_START"		value="253" />
 		<const name="SNOWFLAKES_EVENT_FINISH"		value="254" />
-		
+
 		<const name="INVITE_DOCK_USER_MENU"			value="255" />
 		<const name="INVITE_USER_MENU_INVITE_BTN"	value="256" />
-		
+
 		<const name="RVR_AVAILABLE"					value="258" />
 		<const name="RVR_NEW_STAGE"					value="259" />
-		
+
 		<const name="SHIP_ACES"						value="260" />
 
 		<const name="PREMSHOP"						value="262" />
@@ -293,7 +295,7 @@
 		<const name="BATTLEPASS_SEASON_FINISH_FREE"	value="268" />
 
 		<const name="BATTLEPASS_SEASON_FINISH_PAID"	value="269" />
-		
+
 		<const name="MERGED_SHOPS"					value="270" />
 
 		<const name="CONTINUOUS_BATTLE_ENTER"		value="271" />

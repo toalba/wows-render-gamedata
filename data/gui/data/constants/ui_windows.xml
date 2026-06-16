@@ -40,6 +40,7 @@
 		<const name="BATTLE_PASS_MAIN"			value="ModalWindowBattlePassMain" />
 		<const name="BATTLE_PASS_PURCHASE"		value="ModalWindowBattlePassPurchase" />
 		<const name="PREFERENCES"				value="ModalWindowPreferences" />
+		<const name="NARRATIVE_CAMPAIGN"		value="ModalWindowNarrativeCampaign" />
 
 	</enum>
 
@@ -47,6 +48,7 @@
 		<const name="SHIP_CAROUSEL" 	value="ShipsCarouselPanel" />
 		<const name="CHAT_NOTIFICATION" value="ChatNotificationsPanel" />
 		<const name="SHIP_TTH_DOCK" 	value="ShipTTXPanelDock" />
+		<const name="IO_MARKERS_PANEL" 	value="InteractiveObjectMarkersPanel" />
 	</enum>
 
 	<enum name="BROWSER" type="String">
@@ -81,6 +83,8 @@
 		<const name="SIGNALS"					value="signals"						/>
 		<const name="ENSIGN"					value="ensign"						/>
 		<const name="NAVAL_FLAG"				value="naval_flag"					/>
+		<const name="VISUAL_CUSTOMIZATION"		value="visual_customization"		/>
+		<const name="VISUAL_CUSTOMIZATION_NODE"	value="visual_customization_node"	/>
 		<const name="LEVELING"					value="leveling"					/>
 		<const name="ACHIEVEMENTS"				value="achievements"				/>
 		<const name="RANKS"						value="ranks"						/>
@@ -160,7 +164,7 @@
 		<const name="CUSTOM_SHIP_PREVIEW"		value="custom_ship_preview" />
 
 		<range name="CAROUSEL_VISIBLE"				values="MAIN, MANAGEMENT, EXTERIOR, CUSTOM_SHIP_PREVIEW"/>
-		<range name="TTX_VISIBLE"					values="MAIN, MANAGEMENT, EXTERIOR, RESEARCH, CUSTOM_SHIP_PREVIEW"/>
+		<range name="TTX_VISIBLE"					values="MAIN, MANAGEMENT, EXTERIOR, RESEARCH, CUSTOM_SHIP_PREVIEW, VISUAL_CUSTOMIZATION_NODE"/>
 		<range name="NOT_AVAILABLE_FROM_WEB"		values="BALANCER, PATCH, EMBLEM, SYMBOL, CONSTRUCTOR, BG_SHAPE, BG_COLOR, BG_BORDER_COLOR, BG_MATERIAL, MONITOR, GRAPHICS, SOUND, GAMEPLAY, CONTROLS, MOUSE, OTHER, PORTAL, CONTROLS_SHIPS, CONTROLS_AVIATION, CONTROLS_CHAT, CONTROLS_SPECTATOR"/>
 		<range name="OPTIONS_PAGES"					values="MONITOR, GRAPHICS, SOUND, GAMEPLAY, MOUSE, CONTROLS, OTHER"/>
 		<range name="EVENT_HUB_SCREEN_ROUTES"		values="EVENT_HUB_PROGRESS"/>
@@ -187,7 +191,6 @@
 		<const name="CLAN_REQUEST" value="clanRequest"/>
 		<const name="CLANS_IN_GAME" value="clansInGame"/>
 		<const name="CLAN_WARS_IN_GAME" value="clanWarsInGame"/>
-		<const name="PATROLS_IN_GAME" value="patrolsInGame"/>
 		<const name="RULES_ABOUT_CLAN_SEASON" value="rulesAboutClanSeasonInGame"/>
 		<const name="GUIDES_IN_GAME" value="guidesInGame"/>
 		<const name="WAREHOUSE_IN_GAME" value="warehouseInGame"/>
@@ -231,6 +234,7 @@
 		<const name="LNY_CONTAINERS" value="lnyContainers"/>
 		<const name="LNY_SALVAGE" value="lnySalvage"/>
 		<const name="LNY_GIFT" value="lnyGift"/>
+		<const name="WOWS_STATIC_META_CONTENT" value="wowsStaticMetaContent"/>
 
 		<!-- // License window URLs -->
 		<const name="EXTRA_LICENCES"		value="extraLicences"/>
@@ -245,7 +249,7 @@
 		<const name="ACCOUNT_TRANSFER_START_TRANSFER" value="account_transfer_StartTransfer"/>
 
 		<range name="CLANS_PROJECTS"		values="CLAN_INVITES, CLANS_IN_GAME, CLAN_WARS_IN_GAME, RULES_ABOUT_CLAN_SEASON, CLAN_REQUEST"/>
-		<range name="GAMEFACE_EXPOSED"		values="REPORT_ERROR, FORUM, PERSONAL_ACCOUNT, WARGAMING_NET, WOWS_WEBSITE, EULA, SUPPORT, CLANS_IN_GAME, PATROLS_IN_GAME, EXTRA_LICENCES, GUIDES_IN_GAME, SHOP_IN_GAME, MERCATOR_HOST, VORTEX_HOST, MARKER_HOST, PAGE_ABOUT_GAME_MECHANICS, CLAN_REQUEST"/>
+		<range name="GAMEFACE_EXPOSED"		values="REPORT_ERROR, FORUM, PERSONAL_ACCOUNT, WARGAMING_NET, WOWS_WEBSITE, EULA, SUPPORT, CLANS_IN_GAME, EXTRA_LICENCES, GUIDES_IN_GAME, SHOP_IN_GAME, MERCATOR_HOST, VORTEX_HOST, MARKER_HOST, PAGE_ABOUT_GAME_MECHANICS, CLAN_REQUEST"/>
 	</enum>
 
 	<enum name="WINDOW_STATE" type="Integer">
