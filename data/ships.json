@@ -1105,6 +1105,13 @@
     "nation": "United_Kingdom",
     "species": "Battleship"
   },
+  "3529422032": {
+    "index": "PZSC730",
+    "level": 10,
+    "name": "PZSC730_Taejong",
+    "nation": "Pan_Asia",
+    "species": "Cruiser"
+  },
   "3529422608": {
     "index": "PHSC730",
     "level": 10,
@@ -1167,6 +1174,13 @@
     "name": "PASB729_Georgia",
     "nation": "USA",
     "species": "Battleship"
+  },
+  "3531486416": {
+    "index": "PZSD728",
+    "level": 8,
+    "name": "PZSD728_Datong",
+    "nation": "Pan_Asia",
+    "species": "Destroyer"
   },
   "3531486928": {
     "index": "PJSD728",
@@ -1265,6 +1279,13 @@
     "name": "PASC720_Hawaii",
     "nation": "USA",
     "species": "Cruiser"
+  },
+  "3539940688": {
+    "index": "PVSB720",
+    "level": 10,
+    "name": "PVSB720_Almirante_Perez_Gacitua",
+    "nation": "Pan_America",
+    "species": "Battleship"
   },
   "3539941072": {
     "index": "PJSB720",
@@ -1432,6 +1453,13 @@
     "level": 9,
     "name": "PISB719_Olympian_Giuseppe_Verdi",
     "nation": "Italy",
+    "species": "Battleship"
+  },
+  "3540989744": {
+    "index": "PGSB719",
+    "level": 9,
+    "name": "PGSB719_Friedrich_Carl",
+    "nation": "Germany",
     "species": "Battleship"
   },
   "3540989936": {
@@ -7468,6 +7496,13 @@
     "nation": "Events",
     "species": "Destroyer"
   },
+  "4280169808": {
+    "index": "PVSD014",
+    "level": 4,
+    "name": "PVSD014_Serrano",
+    "nation": "Pan_America",
+    "species": "Destroyer"
+  },
   "4280170192": {
     "index": "PJSD014",
     "level": 2,
@@ -7515,6 +7550,13 @@
     "level": 8,
     "name": "PXSD013_Z_52_PA",
     "nation": "Events",
+    "species": "Destroyer"
+  },
+  "4281218384": {
+    "index": "PVSD013",
+    "level": 3,
+    "name": "PVSD013_Almirante_Villar",
+    "nation": "Pan_America",
     "species": "Destroyer"
   },
   "4281219056": {

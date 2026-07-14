@@ -670,7 +670,11 @@
 		<property	name="id"					type="String"	pk="true"/>
 		<property	name="crewParamsID"			type="String"	 sync="false"/>
 		<property	name="triggerType"			type="String"	 sync="false"/>
+		<property	name="UIID"					type="String"	/> <!-- string for composing l10n and arts filenames-->
 		<property	name="maxTriggerNum"		type="Integer"	/>
+		<property	name="attributesByLevel"	type="Array"	contains="AttributesStruct" />
+
+		<event	name="evAttributesByLevelChanged"/>
 	</component>
 
 	<component	name="CrewUniqueSkillTypes" sync="false">
@@ -3847,13 +3851,14 @@
 	</component>
 
 	<component name="BargeBanner">
-		<property name="name" 				type="String" 	pk="true" 	/>
-		<property name="startTime" 			type="Integer"				/>
-		<property name="finishTime" 		type="Integer"				/>
-		<property name="url" 				type="String"				/>
-		<property name="mainText" 			type="String"				/>
-		<property name="tooltipText" 		type="String"				/>
-		<property name="backgroundImage" 	type="String"				/>
+		<property name="name" 					type="String" 	pk="true" 			/>
+		<property name="startTime" 				type="Integer"						/>
+		<property name="finishTime" 			type="Integer"						/>
+		<property name="url" 					type="String"						/>
+		<property name="mainText" 				type="String"						/>
+		<property name="tooltipText" 			type="String"						/>
+		<property name="backgroundImage" 		type="String"						/>
+		<property name="hideExpirationTimer" 	type="Boolean"	default="false"		/>
 	</component>
 
 	<component name="InteractiveZone">
@@ -4279,6 +4284,8 @@
 		<property name="strategicActionsTaskIndex"	type="Integer"/>
 		<property name="strategicActionsTerritoryID"	type="String"/>
 		<property name="teamWinScore"	type="Integer"/>
+		<property name="battleTypeCategory"	type="Integer"/>
+
 
 		<event	name="evBitmapIdChanged"	/>
 		<event	name="evHelpTextChanged"	/>
@@ -5454,6 +5461,7 @@
 
 	<component name="AbilitiesDataForSkillTooltip">
 		<property name="abilitiesToShow"	type="Dictionary"/> <!-- {abilityId: amount, ...} type(int, int) -->
+		<property name="abilitiesToShowInArray"	type="Array"	contains="Number"/>
 
 		<event	name="evAbilitiesToShowChanged"	/>
 	</component>
@@ -6970,8 +6978,6 @@
 		<property	name="states"						type="String"/>
 		<property	name="isClaimAvailable"				type="Boolean"	default="false"/>
 		<property	name="passUpgradeItemPriceId"		type="Integer"/>
-		<property	name="provincePaidClaimItemPriceId"	type="Integer"/>
-		<property	name="provinceRewardStackId"		type="Integer"/>
 		<property	name="featuredRewardStackId"		type="Integer"/>
 		<property	name="freeCurrencies"				type="Array"/>
 		<property	name="regionsIds"					type="Array"/>
@@ -6979,12 +6985,22 @@
 		<event name="evChanged"/>
 	</component>
 
+	<component name="GrandStrategyPassProvince">
+		<property name="id"						type="String" pk="true"/>
+		<property name="grandStrategyPassID"	type="String"/>
+		<property name="rewardStackId"			type="Integer"/>
+		<property name="prices"					type="Dictionary"/>
+
+		<event name="evChanged"/>
+	</component>
+
 	<component name="GrandStrategyPassRegion">
-		<property	name="id"							type="String" pk="true"/>
-		<property	name="isUpgraded"					type="Boolean"	default="false"/>
-		<property	name="regionPriceId"				type="Integer"/>
-		<property	name="paidRewardStackId"			type="Integer"/>
-		<property	name="dateTimeLock"					type="Integer"/>
+		<property	name="id"										type="String" pk="true"/>
+		<property	name="isUpgraded"								type="Boolean"	default="false"/>
+		<property	name="regionPriceId"							type="Integer"/>
+		<property	name="youWillReceiveAlreadyRewardsStackId"		type="Integer"/>
+		<property	name="youWillReceiveAfterClaimRewardsStackId"	type="Integer"/>
+		<property	name="dateTimeLock"								type="Integer"/>
 
 		<event name="evChanged"/>
 		<event name="evMarkUnseen"/>
@@ -7137,6 +7153,15 @@
 		<property name="currentSpace"	type="String"/>
 	</component>
 
+	<component name="BattleTypeCategory">
+		<property name="groupId"						type="Integer"	pk="true"/>
+		<property name="linkedBattleTypesIds"			type="Array"	contains="Number"	sync="false"/> <!-- array of entityIds } -->
+		<property name="selected"						type="Boolean"/>
+		<property name="translatedString"				type="String"/>
+
+		<event name="evTranslatedStringChanged"/>
+	</component>
+
 	<component name="ClanMarkers">
 		<property	name="id"								type="String"	pk="true"/>
 		<property	name="name"								type="String"/>
@@ -7147,7 +7172,7 @@
 	</component>
 
 	<component name="SysMessageStatsCollector"	sync="false">
-		<property name="id"						type="String" pk="true"/> 
+		<property name="id"						type="String" pk="true"/>
 		<property name="category"				type="String"/>
 		<property name="name"					type="String"/>
 		<property name="actions"				type="Array" contains="String"/>
@@ -7157,8 +7182,10 @@
 	<component name="SelectedTacticalConsumable">
 		<property name="entityId"			type="Integer" default="-1"/>
 		<property name="buffName"			type="String"/>
+		<property name="isSupportConsumable"	type="Boolean"/>
 		<event name="evEntityIdChanged"/>
 		<event name="evBuffNameChanged"/>
+		<event name="evIsSupportConsumableChanged"/>
 	</component>
 
 	<component name="NarrativeCampaign">

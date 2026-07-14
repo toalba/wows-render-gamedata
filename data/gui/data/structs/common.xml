@@ -58,7 +58,8 @@
 		<property	name='category' 		type="String"/> 
 		<property	name='attributeIDS' 	type="String"/> 
 		<property	name='hidden' 			type="Boolean"/> 
-		<property	name='sortIndex' 		type="Integer"/> 
+		<property	name='sortIndex' 		type="Integer"/>
+		<property	name='isFirstValueInRange'	type="Boolean"/>
 	</struct>
 
 	<struct name="AmmoSlotData">
@@ -135,5 +136,10 @@
 		<property	name='value' 	type="Boolean"	/>
 		<property	name='hasDiff' 	type="Boolean"	/>
 	</struct>
-	
+
+	<struct name="UniqueSkillLevel">
+		<property	name='attributes'		type="AttributesStruct"/>
+		<property	name='activationNum'	type="Integer"/>
+	</struct>
+
 </structs>
