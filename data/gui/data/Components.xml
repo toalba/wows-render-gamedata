@@ -2077,6 +2077,7 @@
 		<property	name="squadronSpotFlags"			type="Integer"/>
 		<property	name="squadronSpotted"				type="Boolean" sync="false"/>
 		<property	name="underAntiAirAttack"			type="Boolean"/>
+		<property	name="underAAAimedFireAttack"		type="Boolean"/>
 		<property	name="antiAirThreatCount"			type="Integer"/>
 		<property	name="underFighterAttackStatus"		type="Integer"/> <!-- 0 - нет вардов, 1 - в зоне варда противника, 2 - вард противника атакует -->
 		<property	name="missileThreatStatus"			type="Integer"/>
@@ -2090,6 +2091,7 @@
 		<event		name="evIsSubmarineCollisionWarningChanged"	/>
 		<event		name="evSquadronSpottedChanged"	/>
 		<event		name="evUnderAntiAirAttackChanged"	/>
+		<event		name="evUnderAAAimedFireAttackChanged"	/>
 		<event		name="evAntiAirThreatCountChanged"	/>
 		<event		name="evUnderFighterAttackStatusChanged"	/>
 		<event		name="evMissileThreatChanged"	/>
@@ -2179,7 +2181,14 @@
 
 	</component>
 
-	<component	name="BuffState"	/>
+	<component	name="BuffState"	>
+		<property name="id" 		type="String" pk="true"/>
+		<property name="ownerId" 	type="Number" pk="true"/>
+		<property name="view" 		type="Integer"/>
+		<property name="count" 		type="Number"/>
+		<property name="isVisible" 	type="Boolean" default="true" />
+		<event name="evChanged"/>
+	</component>
 
 	<component	name="CapturePointWorldView"		sync="false">
 		<property	name="id"					type="Integer"/>
@@ -3918,43 +3927,34 @@
 		<event name="evActiveChanged"/>
 	</component>
 
-	<component name="AirDefenseSectorStrength"	sync="false">
-		<property name="normal" type="Integer"/>
-		<property name="activated" type="Integer"/>
-		<property name="deactivated" type="Integer"/>
+	<component name="ManualAA">
+		<property name="currentState"		type="Integer"/>
+		<property name="currentStrength"	type="Number"/>
+		<property name="maxStrength"		type="Number"/>
+
 		<event name="evChanged"/>
-	</component>
-
-	<!-- used to animate sector strength -->
-	<component name="AirDefenseSectorAnimation">
-		<property name="valueFrom" type="Number" default="1"	/>
-		<property name="valueTo" type="Number" default="1" 		/>
-		<property name="percentFrom" type="Number" default="1"	/>
-		<property name="percentTo" type="Number" default="1"	/>
-		<property name="allPhasesEndTime" type="Number"/>
-		<property name="isAnimationStarted" type="Boolean"/>
-		<event name="evStartAnimation"/> <!-- sector phase means that we have added countdown -->
-		<event name="evStartBlink"/> <!-- play sector blink animation -->
-	</component>
-
-	<component name="AirDefenseSector">
-		<property name="sectorId" type="Integer" pk = "true"/>
-		<property name="angle" type="Number"/>
-		<property name="arc" type="Number"/>
-		<property name="state" type="String" default="'default'"/>
-		<property name="enabled" type="Boolean" sync="false"/>
-		<property name="strength" type="Integer" sync="false"/>
-		<property name="wasPrior" type="Boolean" default="false"/> <!-- then have cooldown state we can check if this sector was prior -->
-
-		<event name="evWasPriorChanged"/>
-		<event name="evStateChanged"/>
-		<event name="evEnabledChanged"/>
+		<event name="evStartBlink"/>
+		<event name="evCurrentStateChanged"/>
+		<event name="evCurrentStrengthChanged"/>
 	</component>
 
 	<component name="AirDefensiveFireAura">
 		<property name="near" type="Boolean"/>
 		<property name="middle" type="Boolean"/>
 		<property name="far" type="Boolean"/>
+		<event name="evChanged"/>
+	</component>
+
+	<component name="StateSystemVerticalProgress">
+		<property name="value" type="Number" default="0"/>
+		<event name="evChanged"/>
+	</component>
+
+	<component name="AimedFireStateAttributes">
+		<property name="activeAttributes" type="AttributesStruct"/>
+		<property name="activatorAttributes" type="AttributesStruct"/>
+		<property name="decayAttributes" type="AttributesStruct"/>
+
 		<event name="evChanged"/>
 	</component>
 

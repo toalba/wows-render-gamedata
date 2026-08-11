@@ -289,7 +289,8 @@
 	<struct name="AirDefenseTTX" superclass="IntegralTTX">
 		<property	name='averageAura'		type="AirDefenseAuraTTX"/>
 		<property	name='bubble'			type="BubbleTTX"			default="null"/>
-		<property	name='prioritySector'	type="PrioritySectorTTX"/>
+		<property	name='manualFireControl'	type="PrioritySectorTTX"/>
+		<property	name='aimedFire'			type="AirDefenseAimedFireTTX"	default="null"/>
 		<property	name='guns' 			type="Array" contains="AirDefenseGunTTX"/>
 		<property	name='auras' 			type="Array" contains="AirDefenseAuraTTX"/>
 	</struct>
@@ -315,6 +316,17 @@
 		<property	name='startDamage'		type="FloatDiff"/>
 		<property	name='workTime'			type="FloatDiff"/>
 		<property	name='prepareTime'		type="FloatDiff"/>
+	</struct>
+
+	<struct name="AirDefenseAimedFireTTX">
+		<property	name='auraDamage'			type="FloatDiff"/>
+		<property	name='instantDamageInterval'	type="FloatDiff"/>
+		<property	name='workTime'				type="FloatDiff"/>
+		<property	name='cooldown'				type="FloatDiff"/>
+		<property	name='activeProgressRate'	type="FloatDiff"/>
+		<property	name='inactiveProgressRate'	type="FloatDiff"/>
+		<property	name='decrementDelay'		type="FloatDiff"/>
+		<property	name='decrementRate'		type="FloatDiff"/>
 	</struct>
 
 	<!-- Battery TTX -->

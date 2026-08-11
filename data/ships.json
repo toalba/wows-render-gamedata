@@ -258,6 +258,13 @@
     "nation": "Germany",
     "species": "Battleship"
   },
+  "3330226128": {
+    "index": "PBSB920",
+    "level": 10,
+    "name": "PBSB920_MC_Conqueror",
+    "nation": "United_Kingdom",
+    "species": "Battleship"
+  },
   "3330226160": {
     "index": "PASB920",
     "level": 10,
@@ -1084,6 +1091,20 @@
     "nation": "Japan",
     "species": "Cruiser"
   },
+  "3519985392": {
+    "index": "PISC739",
+    "level": 9,
+    "name": "PISC739_La_Spezia",
+    "nation": "Italy",
+    "species": "Cruiser"
+  },
+  "3520017872": {
+    "index": "PRSB739",
+    "level": 9,
+    "name": "PRSB739_Sovetskaya_Rossiya",
+    "nation": "Russia",
+    "species": "Battleship"
+  },
   "3522049840": {
     "index": "PGSD737",
     "level": 7,
@@ -1126,6 +1147,13 @@
     "nation": "France",
     "species": "Cruiser"
   },
+  "3529455312": {
+    "index": "PJSB730",
+    "level": 10,
+    "name": "PJSB730_Togasa",
+    "nation": "Japan",
+    "species": "Battleship"
+  },
   "3529455600": {
     "index": "PASB730",
     "level": 10,
@@ -1167,6 +1195,13 @@
     "name": "PASC729_Fort_Worth",
     "nation": "USA",
     "species": "Cruiser"
+  },
+  "3530503632": {
+    "index": "PRSB729",
+    "level": 9,
+    "name": "PRSB729_Respublika",
+    "nation": "Russia",
+    "species": "Battleship"
   },
   "3530504176": {
     "index": "PASB729",
@@ -1271,6 +1306,13 @@
     "level": 10,
     "name": "PGSC720_Bremen",
     "nation": "Germany",
+    "species": "Cruiser"
+  },
+  "3539908432": {
+    "index": "PFSC720",
+    "level": 10,
+    "name": "PFSC720_Latouche_Treville",
+    "nation": "France",
     "species": "Cruiser"
   },
   "3539908592": {
@@ -2006,6 +2048,13 @@
     "level": 8,
     "name": "PJSD708_HSF_Harekaze",
     "nation": "Japan",
+    "species": "Destroyer"
+  },
+  "3552458512": {
+    "index": "PHSD708",
+    "level": 8,
+    "name": "PHSD708_Philips_van_Almonde",
+    "nation": "Netherlands",
     "species": "Destroyer"
   },
   "3552490832": {
