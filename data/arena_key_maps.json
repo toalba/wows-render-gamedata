@@ -1,6 +1,13 @@
 {
   "all_key_maps": {
     "BotSharedInfo": [
+      "id", 
+      "accountDBID", 
+      "name", 
+      "teamId", 
+      "realm", 
+      "dogTag", 
+      "isAlive", 
       "shipParamsId", 
       "shipConfigDump", 
       "maxHealth", 
@@ -23,36 +30,22 @@
       "clanColor", 
       "keyTargetMarkers"
     ], 
-    "ClientBuildingSharedInfo": [
-      "id", 
-      "uniqueId", 
-      "teamId", 
-      "paramsId", 
-      "isSuppressed", 
-      "isAlive", 
-      "name", 
-      "isHidden"
-    ], 
-    "ObserverSharedInfo": [
-      "prebattleId", 
-      "isPreBattleOwner", 
-      "preBattleSign", 
-      "preBattleIdOnStart", 
-      "isConnected", 
-      "isClientLoaded", 
-      "keyTargetMarkers", 
-      "invitationsEnabled", 
-      "avatarId", 
-      "playerMode"
-    ], 
+    "ClientBuildingSharedInfo": [], 
     "PlayerSharedInfo": [
+      "id", 
+      "accountDBID", 
+      "name", 
+      "teamId", 
+      "realm", 
+      "dogTag", 
+      "isAlive", 
       "prebattleId", 
       "isPreBattleOwner", 
       "preBattleSign", 
       "preBattleIdOnStart", 
       "isConnected", 
       "isClientLoaded", 
-      "keyTargetMarkers", 
+      "isLeaver", 
       "invitationsEnabled", 
       "avatarId", 
       "playerMode", 
@@ -78,12 +71,6 @@
       "clanColor", 
       "keyTargetMarkers"
     ], 
-    "ServerBuildingSharedInfo": [
-      "id", 
-      "uniqueId", 
-      "teamId", 
-      "paramsId"
-    ], 
     "ServerObserverSharedInfo": [
       "id", 
       "accountDBID", 
@@ -91,19 +78,16 @@
       "teamId", 
       "dogTag", 
       "evaluationsSpent"
-    ], 
-    "ServerSharedInfo": [
-      "Name", 
-      "accountDBID", 
-      "name", 
-      "teamId", 
-      "dogTag", 
-      "shipConfigDump", 
-      "crewModifiersCompactParams", 
-      "evaluationsSpent"
     ]
   }, 
   "bot_keys": [
+    "id", 
+    "accountDBID", 
+    "name", 
+    "teamId", 
+    "realm", 
+    "dogTag", 
+    "isAlive", 
     "shipParamsId", 
     "shipConfigDump", 
     "maxHealth", 
@@ -134,20 +118,19 @@
       "preBattleIdOnStart", 
       "isConnected", 
       "isClientLoaded", 
-      "keyTargetMarkers", 
+      "isLeaver", 
       "invitationsEnabled", 
       "avatarId", 
       "playerMode"
     ], 
-    "CLIENT_BUILDING_DATA": [
+    "COMMON_DATA": [
       "id", 
-      "uniqueId", 
-      "teamId", 
-      "paramsId", 
-      "isSuppressed", 
-      "isAlive", 
+      "accountDBID", 
       "name", 
-      "isHidden"
+      "teamId", 
+      "realm", 
+      "dogTag", 
+      "isAlive"
     ], 
     "SERVER_BUILDING_DATA": [
       "id", 
@@ -156,7 +139,7 @@
       "paramsId"
     ], 
     "SERVER_DATA": [
-      "Name", 
+      "id", 
       "accountDBID", 
       "name", 
       "teamId", 
@@ -210,13 +193,20 @@
     ]
   }, 
   "player_keys": [
+    "id", 
+    "accountDBID", 
+    "name", 
+    "teamId", 
+    "realm", 
+    "dogTag", 
+    "isAlive", 
     "prebattleId", 
     "isPreBattleOwner", 
     "preBattleSign", 
     "preBattleIdOnStart", 
     "isConnected", 
     "isClientLoaded", 
-    "keyTargetMarkers", 
+    "isLeaver", 
     "invitationsEnabled", 
     "avatarId", 
     "playerMode", 

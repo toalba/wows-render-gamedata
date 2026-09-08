@@ -320,6 +320,7 @@
 
 	<struct name="AirDefenseAimedFireTTX">
 		<property	name='auraDamage'			type="FloatDiff"/>
+		<property	name='bubbleDamage'			type="FloatDiff"/>
 		<property	name='instantDamageInterval'	type="FloatDiff"/>
 		<property	name='workTime'				type="FloatDiff"/>
 		<property	name='cooldown'				type="FloatDiff"/>

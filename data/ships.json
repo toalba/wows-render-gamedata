@@ -202,6 +202,13 @@
     "nation": "USA",
     "species": "Battleship"
   },
+  "3320755920": {
+    "index": "PJSC929",
+    "level": 9,
+    "name": "PJSC929_NL_Chikuma_2_Hyb",
+    "nation": "Japan",
+    "species": "Cruiser"
+  },
   "3321837360": {
     "index": "PGSB928",
     "level": 8,
@@ -557,6 +564,13 @@
     "level": 9,
     "name": "PFSB909_Pirate_Jean_Bart",
     "nation": "France",
+    "species": "Battleship"
+  },
+  "3341760464": {
+    "index": "PBSB909",
+    "level": 9,
+    "name": "PBSB909_Black_Marlborough",
+    "nation": "United_Kingdom",
     "species": "Battleship"
   },
   "3341760496": {
@@ -1084,6 +1098,13 @@
     "nation": "Events",
     "species": "Auxiliary"
   },
+  "3518969840": {
+    "index": "PASB740",
+    "level": 10,
+    "name": "PASB740_New_Jersey",
+    "nation": "USA",
+    "species": "Battleship"
+  },
   "3519985360": {
     "index": "PJSC739",
     "level": 9,
@@ -1161,11 +1182,25 @@
     "nation": "USA",
     "species": "Battleship"
   },
+  "3530437840": {
+    "index": "PZSD729",
+    "level": 9,
+    "name": "PZSD729_Red_Hare",
+    "nation": "Pan_Asia",
+    "species": "Destroyer"
+  },
   "3530470608": {
     "index": "PZSC729",
     "level": 9,
     "name": "PZSC729_Baotou",
     "nation": "Pan_Asia",
+    "species": "Cruiser"
+  },
+  "3530470832": {
+    "index": "PSSC729",
+    "level": 9,
+    "name": "PSSC729_Aragon",
+    "nation": "Spain",
     "species": "Cruiser"
   },
   "3530471120": {
@@ -1720,6 +1755,13 @@
     "name": "PJSB715_HSF_Hiei",
     "nation": "Japan",
     "species": "Battleship"
+  },
+  "3549869360": {
+    "index": "PWSS710",
+    "level": 10,
+    "name": "PWSS710_Orzel",
+    "nation": "Europe",
+    "species": "Submarine"
   },
   "3549869840": {
     "index": "PHSS710",
@@ -7202,6 +7244,13 @@
     "nation": "USA",
     "species": "Destroyer"
   },
+  "4274959664": {
+    "index": "PWSC019",
+    "level": 9,
+    "name": "PWSC019_Tirfing",
+    "nation": "Europe",
+    "species": "Cruiser"
+  },
   "4274959728": {
     "index": "PUSC019",
     "level": 9,
@@ -7264,6 +7313,13 @@
     "name": "PFSD018_L_Aventurier",
     "nation": "France",
     "species": "Destroyer"
+  },
+  "4276008240": {
+    "index": "PWSC018",
+    "level": 8,
+    "name": "PWSC018_Kriti",
+    "nation": "Europe",
+    "species": "Cruiser"
   },
   "4276008304": {
     "index": "PUSC018",
@@ -7356,6 +7412,13 @@
     "nation": "France",
     "species": "Destroyer"
   },
+  "4277056816": {
+    "index": "PWSC017",
+    "level": 7,
+    "name": "PWSC017_Hel",
+    "nation": "Europe",
+    "species": "Cruiser"
+  },
   "4277056880": {
     "index": "PUSC017",
     "level": 7,
@@ -7438,6 +7501,13 @@
     "level": 10,
     "name": "PXSC016_Monster_Cruiser",
     "nation": "Events",
+    "species": "Cruiser"
+  },
+  "4278105392": {
+    "index": "PWSC016",
+    "level": 6,
+    "name": "PWSC016_Tre_Kronor",
+    "nation": "Europe",
     "species": "Cruiser"
   },
   "4278105456": {
@@ -7802,6 +7872,13 @@
     "level": 7,
     "name": "PXSC010_Hinden_Apr2019",
     "nation": "Events",
+    "species": "Cruiser"
+  },
+  "4284396848": {
+    "index": "PWSC010",
+    "level": 10,
+    "name": "PWSC010_Vanadis",
+    "nation": "Europe",
     "species": "Cruiser"
   },
   "4284396912": {

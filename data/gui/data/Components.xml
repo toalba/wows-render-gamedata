@@ -228,7 +228,7 @@
 		<property	name="rewardId"					type="Integer"/>
 
 		<property	name="features"					type="Number"/> <!-- bit mask of AccountFeature.featureId -->
-
+		<property	name="featureList"				type="Array"/> <!-- individual feature bitmask values -->
 
 		<event		name="evIsCompletedChanged"	/>
 		<event		name="evStepTypeChanged"	/>
@@ -236,6 +236,7 @@
 		<event		name="evHasFeaturesChanged"	/>
 		<event		name="evHasRewardChanged"	/>
 		<event		name="evFeaturesChanged"	/>
+		<event		name="evFeatureListChanged"	/>
 	</component>
 
 	<component	name="AccountLevelCarouselPosition">
@@ -2258,9 +2259,11 @@
 		<property	name="type"					type="Integer"		/> <!-- category -->
 		<property	name="status"				type="Integer"		/>
 		<property	name="view"					type="Integer"		/>
+		<property	name="visibleInStatusPanel"	type="Boolean"		/>
 
 		<event		name="evStatusChanged"	/>
 		<event		name="evViewChanged"	/>
+		<event		name="evVisibleInStatusPanelChanged"	/>
 	</component>
 
 	<component name="StatePresentationOverwrite">
@@ -6008,6 +6011,7 @@
 		<property name="levelGapExceed"					type="Boolean" sync="false"/>
 		<property name="onlyMonoGroup"					type="Boolean" sync="false"/>
 		<property name="levelGap"						type="Integer" sync="false"/>
+		<property name="pveLevelsMismatch"				type="Boolean" sync="false"/>
 		<property name="name"							type="String"/>
 		<property name="inPortParticipantsCount"		type="Integer"/>
 		<property name="ownerId"						type="Integer"/>
