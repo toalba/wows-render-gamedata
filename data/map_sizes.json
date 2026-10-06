@@ -150,5 +150,17 @@
   "58_RidgeNew": {
     "space_size": 1600,
     "scaling": 0.475
+  },
+  "e02_Halloween_2017": {
+    "space_size": 1400,
+    "scaling": 0.5428571
+  },
+  "e04_Halloween_2018": {
+    "space_size": 1200,
+    "scaling": 0.6333333
+  },
+  "e09_Halloween_2019": {
+    "space_size": 1600,
+    "scaling": 0.475
   }
 }

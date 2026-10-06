@@ -307,6 +307,13 @@
     "nation": "Japan",
     "species": "Cruiser"
   },
+  "3331274160": {
+    "index": "PSSB919",
+    "level": 9,
+    "name": "PSSB919_Black_Victoria",
+    "nation": "Spain",
+    "species": "Battleship"
+  },
   "3331274736": {
     "index": "PASB919",
     "level": 9,
@@ -342,12 +349,26 @@
     "nation": "Germany",
     "species": "Battleship"
   },
+  "3332323152": {
+    "index": "PFSB918",
+    "level": 8,
+    "name": "PFSB918_Black_Flandre",
+    "nation": "France",
+    "species": "Battleship"
+  },
   "3332323312": {
     "index": "PASB918",
     "level": 8,
     "name": "PASB918_Azur_Massachusetts",
     "nation": "USA",
     "species": "Battleship"
+  },
+  "3332356080": {
+    "index": "PASA918",
+    "level": 8,
+    "name": "PASA918_Black_Hornet",
+    "nation": "USA",
+    "species": "AirCarrier"
   },
   "3333371888": {
     "index": "PASB917",
@@ -432,6 +453,13 @@
     "name": "PGSD910_East_Z_52",
     "nation": "Germany",
     "species": "Destroyer"
+  },
+  "3340678352": {
+    "index": "PZSC910",
+    "level": 10,
+    "name": "PZSC910_Black_Incheon",
+    "nation": "Pan_Asia",
+    "species": "Cruiser"
   },
   "3340678608": {
     "index": "PRSC910",
@@ -1070,6 +1098,13 @@
     "nation": "Japan",
     "species": "Battleship"
   },
+  "3488528080": {
+    "index": "PJSC769",
+    "level": 9,
+    "name": "PJSC769_Ota",
+    "nation": "Japan",
+    "species": "Cruiser"
+  },
   "3499013840": {
     "index": "PJSC759",
     "level": 9,
@@ -1364,6 +1399,13 @@
     "nation": "Pan_America",
     "species": "Battleship"
   },
+  "3539940816": {
+    "index": "PRSB720",
+    "level": 10,
+    "name": "PRSB720_Rodina",
+    "nation": "Russia",
+    "species": "Battleship"
+  },
   "3539941072": {
     "index": "PJSB720",
     "level": 10,
@@ -1644,6 +1686,13 @@
     "nation": "USA",
     "species": "Battleship"
   },
+  "3542070992": {
+    "index": "PJSA718",
+    "level": 8,
+    "name": "PJSA718_Akagi",
+    "nation": "Japan",
+    "species": "AirCarrier"
+  },
   "3542071248": {
     "index": "PBSA718",
     "level": 8,
@@ -1705,6 +1754,13 @@
     "level": 7,
     "name": "PGSC717_Nurnberg_1944",
     "nation": "Germany",
+    "species": "Cruiser"
+  },
+  "3543054320": {
+    "index": "PASC717",
+    "level": 7,
+    "name": "PASC717_Honolulu",
+    "nation": "USA",
     "species": "Cruiser"
   },
   "3543086544": {
@@ -7566,6 +7622,13 @@
     "nation": "France",
     "species": "Destroyer"
   },
+  "4279153968": {
+    "index": "PWSC015",
+    "level": 5,
+    "name": "PWSC015_Kralj_Petar_I",
+    "nation": "Europe",
+    "species": "Cruiser"
+  },
   "4279154032": {
     "index": "PUSC015",
     "level": 5,
@@ -7635,6 +7698,13 @@
     "name": "PASD014_Leader_1919",
     "nation": "USA",
     "species": "Destroyer"
+  },
+  "4280202544": {
+    "index": "PWSC014",
+    "level": 4,
+    "name": "PWSC014_Dragon",
+    "nation": "Europe",
+    "species": "Cruiser"
   },
   "4280202608": {
     "index": "PUSC014",

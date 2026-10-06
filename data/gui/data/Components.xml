@@ -3309,6 +3309,15 @@
 		<property name="color3" 		type="Array"/>
 	</component>
 
+	<component name="KillTag">
+		<property	name="isKillTagEnabled"				type="Boolean" default="true" />
+		<property	name="fragsCountRandomBattle"		type="Integer"/>
+		<property	name="fragsCountCooperativeBattle"	type="Integer"/>
+		<property	name="fragsCountRankedBattle"		type="Integer"/>
+
+		<event		name="evUpdated" />
+	</component>
+
 	<component	name="UpgradableShipInfo">
 		<property	name="id"					type="Number" pk="true"/>
 		<property	name="isExplored"			type="Boolean"		/>
@@ -3447,7 +3456,9 @@
 		<property	name="shipIsElite"		type="Boolean"/>
 		<!-- <property	name="shipModernizationIds"		type="Array"/> -->
 		<!-- <property	name="shipModernizationCount"	type="Integer"/> -->
-		<property	name="battleTypes"		type="Array"/>
+		<property	name="battleTypes"			type="Array"/>
+		<property	name="eventBattleTypes"		type="Array" contains="Number"/>
+		<property	name="pveBattleTypes"		type="Array" contains="Number"/>
 		<property	name="onlyPlatoons"		type="Boolean" sync="false"/>
 		<property	name="isShipSuitable"	type="Boolean" default="true"/>
 		<property	name="isBattleSuitable"	type="Boolean" default="true"/>
@@ -4779,15 +4790,13 @@
 	<component name="SseConditions">
 		<property name="isSingleBattle"			type="Boolean" sync="false"/>
 		<property name="battleTypes"			type="Array"/>
-		<property name="eventBattleTypes"		type="Array"/>
-		<property name="pveBattleTypes"			type="Array"/>
-		<property name="sortedBattleTypesForUI"	type="Array"/> <!-- battleTypes + eventBattleTypes + pveBattleTypes -->
+		<property name="eventBattleTypes"		type="Array" contains="String"/>
+		<property name="pveBattleTypes"			type="Array" contains="String"/>
 		<property name="countablesIds"			type="Array"/> <!-- this is actually array of ONE dict with keys {'battleProgress', 'currentProgress', 'maxProgress', 'ids'}, constructed in SSEClientUtils.getConditionInfo-->
 		<property name="conditionCategory"		type="String"/> <!-- ref Sse.SSE_CONDITION_CATEGORY.* -->
 		<property name="pveModifier"			type="Number"/>
 		<property name="pveModifierApplied"		type="Boolean"/>
 		<event name="evConditionSetChanged"/>
-		<event name="evSortedBattleTypesForUIChanged"/>
 	</component>
 
 	<component name="SseWindowState">
@@ -7251,5 +7260,19 @@
 	<component name="NarrativeCampaignPPLevel"/>
 
 	<component name="NarrativeCampaignCurrentLevel"/>
+
+	<component name="ADeck2Banner">
+		<property name="isVisible"				type="Boolean"	default="false"	/>
+		<property name="isActive"				type="Boolean"	default="false"	/>
+		<property name="hasNewRewards"			type="Boolean"	default="false"	/>
+		<property name="hasNewPurchase"			type="Boolean"	default="false"	/>
+		<property name="isFirstDailyVisit"		type="Boolean"	default="false"	/>
+		<property name="hasVisitedFromBrowser"	type="Boolean"	default="false"	/>
+		<property name="eventEndsAt"			type="Number"	default="0"		/>	<!-- Timestamp -->
+		<property name="isEventEndsSoon"		type="Boolean"	default="false"	/> 
+
+		<event name="evIsVisibleChanged"	/>
+		<event name="evChanged"				/>
+	</component>
 
 </components>
